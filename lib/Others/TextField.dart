@@ -20,7 +20,7 @@ class HomeScren extends StatelessWidget{
               borderRadius: BorderRadius.circular(10),
               borderSide: BorderSide(color: Colors.red),
             ),
-            focusedBorder: OutlineInputBorder(
+            enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
               borderSide: BorderSide(color: Colors.red),
             ),
