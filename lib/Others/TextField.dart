@@ -12,7 +12,13 @@ class HomeScren extends StatelessWidget{
     return Scaffold(
       appBar: AppBar(title: Text("TextField"),
       ),
-      body: TextField(),
+      body: TextField(
+        decoration:InputDecoration(
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+        ),
+      ),
     );
   }
 
