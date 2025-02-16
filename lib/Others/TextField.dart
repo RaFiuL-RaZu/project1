@@ -16,6 +16,8 @@ class HomeScren extends StatelessWidget{
         padding: const EdgeInsets.all(8.0),
         child: TextField(
           decoration:InputDecoration(
+            prefixIcon: Icon(Icons.search),
+            suffixIcon: Icon(Icons.remove_red_eye),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
               borderSide: BorderSide(color: Colors.red),
