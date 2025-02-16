@@ -56,7 +56,14 @@ class HomeScren extends StatelessWidget{
                   ),
                 ],
               ),
-              SizedBox(height: 100,),
+              SizedBox(height: 100,
+                child: Container(
+                  alignment: Alignment.topLeft,
+                  child: Text("House",style: TextStyle(color: Colors.white,fontSize: 28,fontWeight: FontWeight.w700,letterSpacing: 3,),),
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+
+                ),
+              ),
               Container(
                 height:600,
                 width: double.infinity,
