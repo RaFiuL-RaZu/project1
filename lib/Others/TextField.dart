@@ -20,13 +20,7 @@ class HomeScren extends StatelessWidget{
             labelText:"Mail or Number",
             prefixIcon: Icon(Icons.search),
             suffixIcon: Icon(Icons.remove_red_eye),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(color: Colors.red),
-            ),
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(color: Colors.red),
+            focusedBorder: OutlineInputBorder(
             ),
           ),
         ),
