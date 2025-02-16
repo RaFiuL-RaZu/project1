@@ -26,10 +26,10 @@ class HomeScren extends StatelessWidget{
                 height: 80,
                 width: double.infinity,
                 color: Colors.grey.shade300,
-                child: Text("Coffee",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w700),),
+                child: Text("Coffee",style: TextStyle(fontSize: 28,fontWeight: FontWeight.w700,letterSpacing:3 ),),
               ),
               Positioned(
-                  bottom: -58,
+                  bottom: -52,
                   right: 30,
                   child:Container(
                     height: 100,
