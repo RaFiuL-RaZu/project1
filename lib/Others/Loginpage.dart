@@ -34,13 +34,18 @@ class HomeScren extends StatelessWidget{
                   child:CircleAvatar(
                     radius: 50,
                     child: ClipOval(
-                      child: Image.network("https://img.freepik.com/free-vector/coffee-love-foam-with-beans-cartoon-icon-illustration_138676-2575.jpg"),
+                      child: Image.network("https://insanelygoodrecipes.com/wp-content/uploads/2020/07/Cup-Of-Creamy-Coffee.png",
+                        height: double.infinity,
+                        width: double.infinity,
+                        fit: BoxFit.fill,
+                      ),
                     ),
                     backgroundColor: Colors.grey.shade400,
                   ),
               ),
             ],
-          )
+          ),
+
         ],
       ),
     );
