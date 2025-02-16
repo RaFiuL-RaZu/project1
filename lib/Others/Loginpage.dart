@@ -27,13 +27,13 @@ class HomeScren extends StatelessWidget{
                 width: double.infinity,
                 color: Colors.grey.shade300,
                 child: Text("Coffee",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w700),),
-              )
+              ),
               Positioned(
-                  bottom: -40,
-                  left: 30,
+                  bottom: -58,
+                  right: 30,
                   child:CircleAvatar(
-                    radius: 40,
-                    backgroundColor: Colors.black,
+                    radius: 50,
+                    backgroundColor: Colors.grey.shade400,
                   )
               ),
             ],
