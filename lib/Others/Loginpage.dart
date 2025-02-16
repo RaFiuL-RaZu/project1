@@ -22,10 +22,11 @@ class HomeScren extends StatelessWidget{
             children: [
               Container(
                 alignment: Alignment.bottomLeft,
+                padding: EdgeInsets.symmetric(vertical: 5,horizontal: 20),
                 height: 80,
                 width: double.infinity,
                 color: Colors.grey.shade200,
-                child: Text("Coffe",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w700),),
+                child: Text("Coffee",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w700),),
               )
             ],
           )
