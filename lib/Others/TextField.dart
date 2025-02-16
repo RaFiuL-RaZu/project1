@@ -3,6 +3,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:project1/Others/HomeActivity.dart';
 
 class HomeScren extends StatelessWidget{
   HomeScren({Key? key}) : super(key: key);
@@ -48,6 +49,12 @@ class HomeScren extends StatelessWidget{
             ElevatedButton(onPressed: (){
               nameController.clear();
             }, child:Text("Delete")),
+
+            SizedBox(height: 100,),
+
+            TextButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeActivity(),),);
+            }, child: Text("WhatsApp Page")),
           ],
         ),
       ),
