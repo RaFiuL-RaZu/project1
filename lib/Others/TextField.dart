@@ -5,8 +5,9 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 
 class HomeScren extends StatelessWidget{
-  const HomeScren({Key? key}) : super(key: key);
+  HomeScren({Key? key}) : super(key: key);
 
+  TextEditingController nameController=TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -16,27 +17,35 @@ class HomeScren extends StatelessWidget{
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: TextField(
-          cursorColor: Colors.amber,
-          cursorHeight: 10,
-          keyboardType:TextInputType.phone,
-          onChanged: (value){
-            log("==============$value==========");
-          },
+        child: Column(
+          children: [
+            TextField(
+              cursorColor: Colors.amber,
+              cursorHeight: 10,
+              keyboardType:TextInputType.phone,
+              controller: nameController,
+              onChanged: (value){
+                log("==============$value==========");
+              },
 
-          decoration:InputDecoration(
-            labelText:"Mail or Number",
-            prefixIcon: Icon(Icons.search),
-            suffixIcon: Icon(Icons.remove_red_eye),
-            focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(color: Colors.red),
+              decoration:InputDecoration(
+                labelText:"Mail or Number",
+                prefixIcon: Icon(Icons.search),
+                suffixIcon: Icon(Icons.remove_red_eye),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Colors.red),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(50),
+                  borderSide: BorderSide(color: Colors.red),
+                ),
+              ),
             ),
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(50),
-              borderSide: BorderSide(color: Colors.red),
-            ),
-          ),
+            ElevatedButton(onPressed: (){
+              log("==============Button : $nameController");
+            }, child:Text("Log In"))
+          ],
         ),
       ),
     );
