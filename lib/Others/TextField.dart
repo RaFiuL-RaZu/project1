@@ -21,6 +21,12 @@ class HomeScren extends StatelessWidget{
             prefixIcon: Icon(Icons.search),
             suffixIcon: Icon(Icons.remove_red_eye),
             focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10),
+              borderSide: BorderSide(color: Colors.red),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(50),
+              borderSide: BorderSide(color: Colors.red),
             ),
           ),
         ),
