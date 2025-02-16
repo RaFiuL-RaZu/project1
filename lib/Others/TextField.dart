@@ -1,5 +1,7 @@
 
 
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 class HomeScren extends StatelessWidget{
@@ -19,7 +21,7 @@ class HomeScren extends StatelessWidget{
           cursorHeight: 10,
           keyboardType:TextInputType.phone,
           onChanged: (value){
-            print("==============$value==========");
+            log("==============$value==========");
           },
 
           decoration:InputDecoration(
