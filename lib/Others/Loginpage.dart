@@ -37,8 +37,18 @@ class HomeScren extends StatelessWidget{
                     decoration:BoxDecoration(
                       color: Colors.grey,
                       shape: BoxShape.circle,
-                      border: Border.all(color: Colors.white,width: 3),
+                      border: Border.all(color: Colors.grey,width: 3),
                     ) ,
+                    child: CircleAvatar(
+                      backgroundColor: Colors.grey.shade400,
+                      child: ClipOval(
+                        child: Image.network("https://www.shutterstock.com/image-photo/latte-art-coffee-isolated-on-600nw-287756555.jpg",
+                          height: double.infinity,
+                          width: 100,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
                   )
               ),
             ],
