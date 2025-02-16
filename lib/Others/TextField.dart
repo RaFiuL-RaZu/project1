@@ -15,6 +15,8 @@ class HomeScren extends StatelessWidget{
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: TextField(
+          cursorColor: Colors.amber,
+          cursorHeight: 10,
           keyboardType:TextInputType.phone,
 
           decoration:InputDecoration(
