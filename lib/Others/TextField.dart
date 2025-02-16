@@ -43,8 +43,8 @@ class HomeScren extends StatelessWidget{
               ),
             ),
             ElevatedButton(onPressed: (){
-              log("==============Button : $nameController");
-            }, child:Text("Log In"))
+              log("==============Button : ${nameController.text}");
+            }, child:Text("Log In")),
           ],
         ),
       ),
