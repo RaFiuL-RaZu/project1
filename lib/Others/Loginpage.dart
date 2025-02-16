@@ -15,13 +15,17 @@ class HomeScren extends StatelessWidget{
 
     return Scaffold(
       body:Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Stack(
+            clipBehavior: Clip.none,
             children: [
               Container(
-                height: 100,
+                height: 80,
                 width: double.infinity,
-                color: Colors.grey.shade200,
+                decoration: BoxDecoration(
+                  color: Colors.grey.shade200,
+                ),
                 child: Text("Coffe",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w700),),
               )
             ],
