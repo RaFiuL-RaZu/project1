@@ -17,7 +17,7 @@ class HomeScren extends StatelessWidget{
         child: TextField(
 
           decoration:InputDecoration(
-            hintText:"Mail or Number",
+            labelText:"Mail or Number",
             prefixIcon: Icon(Icons.search),
             suffixIcon: Icon(Icons.remove_red_eye),
             border: OutlineInputBorder(
