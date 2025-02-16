@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:project1/Others/SingupPage.dart';
 
+
 class HomeScren extends StatelessWidget {
   HomeScren({Key? key}) : super(key: key);
 
@@ -141,7 +142,9 @@ class HomeScren extends StatelessWidget {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  ElevatedButton(onPressed: (){}, child: Text("Sign in",
+                                  ElevatedButton(onPressed: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeActivity()));
+                                  }, child: Text("Sign in",
                                   ),
                                     style: ButtonStyle(
                                       foregroundColor:MaterialStateProperty.all(Colors.white),
