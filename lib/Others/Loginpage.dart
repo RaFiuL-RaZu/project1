@@ -31,25 +31,19 @@ class HomeScren extends StatelessWidget{
               Positioned(
                   bottom: -58,
                   right: 30,
-                  child:CircleAvatar(
-                    radius: 50,
-                    child: ClipOval(
-                      child: Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFU556cDQ4tVjoanhhDj1DUYQmCo-MiE0ZF7Jy2nN1dcxOIDz4jg046mkFv5tEZ9WKekk&usqp=CAU",
-                        height: double.infinity,
-                        width: double.infinity,
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                    backgroundColor: Colors.grey.shade400,
-                  ),
+                  child:Container(
+                    height: 100,
+                    width: 100,
+                    decoration:BoxDecoration(
+                      color: Colors.grey,
+                      shape: BoxShape.circle,
+                      border: Border.all(color: Colors.white,width: 3),
+                    ) ,
+                  )
               ),
             ],
           ),
-          Container(
-            height: 100,
-            width: double.infinity,
-           color: Colors.black,
-          ),
+
 
         ],
       ),
