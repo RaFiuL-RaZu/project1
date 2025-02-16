@@ -18,6 +18,9 @@ class HomeScren extends StatelessWidget{
           cursorColor: Colors.amber,
           cursorHeight: 10,
           keyboardType:TextInputType.phone,
+          onChanged: (value){
+            print("==============$value==========");
+          },
 
           decoration:InputDecoration(
             labelText:"Mail or Number",
