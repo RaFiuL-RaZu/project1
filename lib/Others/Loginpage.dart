@@ -21,11 +21,10 @@ class HomeScren extends StatelessWidget{
             clipBehavior: Clip.none,
             children: [
               Container(
+                alignment: Alignment.bottomLeft,
                 height: 80,
                 width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Colors.grey.shade200,
-                ),
+                color: Colors.grey.shade200,
                 child: Text("Coffe",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w700),),
               )
             ],
