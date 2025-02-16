@@ -33,8 +33,9 @@ class HomeScren extends StatelessWidget{
                   right: 30,
                   child:CircleAvatar(
                     radius: 50,
+                    backgroundImage: NetworkImage("https://img.freepik.com/free-vector/coffee-love-foam-with-beans-cartoon-icon-illustration_138676-2575.jpg"),
                     backgroundColor: Colors.grey.shade400,
-                  )
+                  ),
               ),
             ],
           )
