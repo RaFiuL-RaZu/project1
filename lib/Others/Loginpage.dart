@@ -15,7 +15,7 @@ class HomeScren extends StatelessWidget{
 
     return Scaffold(
       body:Container(
-        color: Colors.black,
+        color: Colors.black87,
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -25,7 +25,7 @@ class HomeScren extends StatelessWidget{
                 children: [
                   Container(
                     alignment: Alignment.bottomLeft,
-                    padding: EdgeInsets.symmetric(vertical: 5,horizontal: 20),
+                    padding: EdgeInsets.symmetric(vertical: 2,horizontal: 20),
                     height: 80,
                     width: double.infinity,
                     color: Colors.grey.shade300,
@@ -59,7 +59,7 @@ class HomeScren extends StatelessWidget{
               SizedBox(height: 100,
                 child: Container(
                   alignment: Alignment.topLeft,
-                  child: Text("House",style: TextStyle(color: Colors.white,fontSize: 28,fontWeight: FontWeight.w700,letterSpacing: 3,),),
+                  child: Text("house",style: TextStyle(color: Colors.white70,fontSize: 25,fontWeight: FontWeight.w700,letterSpacing: 2),),
                   padding: EdgeInsets.symmetric(horizontal: 20),
 
                 ),
@@ -67,8 +67,27 @@ class HomeScren extends StatelessWidget{
               Container(
                 height:600,
                 width: double.infinity,
-                color: Colors.white,
-              )
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(),
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(60)),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      child: Column(
+                        children: [
+                          SizedBox(height: 50,),
+                          Text("Login",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+                ),
 
 
             ],
