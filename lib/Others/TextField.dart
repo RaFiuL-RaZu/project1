@@ -15,6 +15,7 @@ class HomeScren extends StatelessWidget{
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: TextField(
+          keyboardType:TextInputType.phone,
 
           decoration:InputDecoration(
             labelText:"Mail or Number",
