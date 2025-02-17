@@ -39,7 +39,7 @@ class _CalculatorState extends State<Calculator> {
             children: [
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text("Name : Razu ",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w700),),
+                child: Text("Name : Razu",style: TextStyle(fontSize: 28,fontWeight: FontWeight.w700),),
               ),
               Text("Total CGPA : ${cgpa.toStringAsFixed(3)}",style: TextStyle(fontSize: 28,fontWeight: FontWeight.w800),),
               SizedBox(height: 30,),
