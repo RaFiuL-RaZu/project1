@@ -13,6 +13,8 @@ class Calculator extends StatefulWidget {
 
 class _CalculatorState extends State<Calculator> {
   String myText =" ";
+  double cgpa a= 0 ;
+
   TextEditingController controller1=TextEditingController();
   TextEditingController controller2=TextEditingController();
   TextEditingController controller3=TextEditingController();
@@ -41,9 +43,9 @@ class _CalculatorState extends State<Calculator> {
                 children: [
                   Expanded(
                     child: TextField(
-                      controller:firstController,
+                      controller:controller1,
                       decoration: InputDecoration(
-                          labelText: "write cgpa",
+                          labelText: "1st Semester",
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                           )
@@ -53,9 +55,9 @@ class _CalculatorState extends State<Calculator> {
                   SizedBox(width: 100,),
                   Expanded(
                     child: TextField(
-                      controller:firstController,
+                      controller:controller2,
                       decoration: InputDecoration(
-                          labelText: "write cgpa",
+                          labelText: "2nd Semester",
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                           )
@@ -69,9 +71,9 @@ class _CalculatorState extends State<Calculator> {
                 children: [
                   Expanded(
                     child: TextField(
-                      controller:firstController,
+                      controller:controller3,
                       decoration: InputDecoration(
-                          labelText: "write cgpa",
+                          labelText: "3rd Semester",
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                           )
@@ -81,9 +83,9 @@ class _CalculatorState extends State<Calculator> {
                   SizedBox(width: 100,),
                   Expanded(
                     child: TextField(
-                      controller:firstController,
+                      controller:controller4,
                       decoration: InputDecoration(
-                          labelText: "write cgpa",
+                          labelText: "4th Semester",
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                           )
@@ -97,9 +99,9 @@ class _CalculatorState extends State<Calculator> {
                 children: [
                   Expanded(
                     child: TextField(
-                      controller:firstController,
+                      controller:controller5,
                       decoration: InputDecoration(
-                          labelText: "write cgpa",
+                          labelText: "5th Semester",
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                           )
@@ -109,9 +111,9 @@ class _CalculatorState extends State<Calculator> {
                   SizedBox(width: 100,),
                   Expanded(
                     child: TextField(
-                      controller:firstController,
+                      controller:controller6,
                       decoration: InputDecoration(
-                          labelText: "write cgpa",
+                          labelText: "6th Semester",
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                           )
@@ -125,9 +127,9 @@ class _CalculatorState extends State<Calculator> {
                 children: [
                   Expanded(
                     child: TextField(
-                      controller:firstController,
+                      controller:controller7,
                       decoration: InputDecoration(
-                          labelText: "write cgpa",
+                          labelText: "7th Semester",
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                           )
@@ -137,9 +139,9 @@ class _CalculatorState extends State<Calculator> {
                   SizedBox(width: 100,),
                   Expanded(
                     child: TextField(
-                      controller:firstController,
+                      controller:controller8,
                       decoration: InputDecoration(
-                          labelText: "write cgpa",
+                          labelText: "8th Semester",
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                           )
@@ -149,11 +151,8 @@ class _CalculatorState extends State<Calculator> {
                 ],
               ),
               ElevatedButton(onPressed: (){
-                myText=(3.1416*(double.parse(firstController.text)*double.parse(firstController.text))).toStringAsFixed(2);
+                cgpa=(double.parse(controller1.text);
 
-                    setState(() {
-
-                });
               }, child:Text("Add")),
             ],
           ),
