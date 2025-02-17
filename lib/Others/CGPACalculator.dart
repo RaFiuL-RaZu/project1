@@ -19,7 +19,7 @@ class Calculator extends StatelessWidget{
         child: Column(
           children: [
             SizedBox(height: 50,),
-            Text("Hello"),
+            Text("Hello",style: TextStyle(fontSize: 28,fontWeight: FontWeight.w800),),
             SizedBox(height: 100,),
             TextField(
               decoration: InputDecoration(
