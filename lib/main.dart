@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:project1/Others/CGPACalculator.dart';
 import 'package:project1/Others/Loginpage.dart';
 
 main(){
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget{
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScren(),);
+      home: Calculator(),);
   }
 
 }
