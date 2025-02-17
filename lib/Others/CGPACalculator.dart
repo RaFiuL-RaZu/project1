@@ -51,7 +51,7 @@ class _CalculatorState extends State<Calculator> {
               ),
               SizedBox(height: 20,),
               ElevatedButton(onPressed: (){
-                myText=(int.parse(firstController.text)+int.parse(secondController.text)).toString();
+                myText=(int.parse(firstController.text)+int.parse(secondController.text)).toStringAsFixed(2);
                 setState(() {
 
                 });
