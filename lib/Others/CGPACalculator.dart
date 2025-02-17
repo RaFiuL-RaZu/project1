@@ -18,10 +18,13 @@ class Calculator extends StatelessWidget{
       body: Center(
         child: Column(
           children: [
+            SizedBox(height: 50,),
+            Text("Hello"),
+            SizedBox(height: 100,),
             TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(20))
+                  borderRadius: BorderRadius.all(Radius.circular(10))
                 ),
               ),
             ),
