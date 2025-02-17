@@ -13,7 +13,7 @@ class Calculator extends StatefulWidget {
 
 class _CalculatorState extends State<Calculator> {
   String myText =" ";
-  double cgpa a= 0 ;
+  double cgpa= 0;
 
   TextEditingController controller1=TextEditingController();
   TextEditingController controller2=TextEditingController();
@@ -37,7 +37,7 @@ class _CalculatorState extends State<Calculator> {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              Text(myText,style: TextStyle(fontSize: 28,fontWeight: FontWeight.w800),),
+              Text("CGPA : ${cgpa.toStringAsFixed(2)}",style: TextStyle(fontSize: 28,fontWeight: FontWeight.w800),),
               SizedBox(height: 30,),
               Row(
                 children: [
@@ -151,9 +151,18 @@ class _CalculatorState extends State<Calculator> {
                 ],
               ),
               ElevatedButton(onPressed: (){
-                cgpa=(double.parse(controller1.text);
+                cgpa=(double.parse(controller1.text)*0.5)+
+                    (double.parse(controller2.text)*0.5)+
+                    (double.parse(controller3.text)*0.5)+
+                    (double.parse(controller4.text)*0.10)+
+                    (double.parse(controller5.text)*0.15)+
+                    (double.parse(controller6.text)*0.20)+
+                    (double.parse(controller7.text)*0.25)+
+                    (double.parse(controller8.text)*0.15);
+                    setState(() {
+                    });
 
-              }, child:Text("Add")),
+              }, child:Text("Add GPA")),
             ],
           ),
         ),
