@@ -40,19 +40,10 @@ class _CalculatorState extends State<Calculator> {
                 ),
               ),
               SizedBox(height: 30,),
-              TextField(
-                controller: secondController,
-                decoration: InputDecoration(
-                    labelText: "write cgpa",
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
-                    )
-                ),
-              ),
-              SizedBox(height: 20,),
               ElevatedButton(onPressed: (){
-                myText=(int.parse(firstController.text)+int.parse(secondController.text)).toStringAsFixed(2);
-                setState(() {
+                myText=(3.1416*(double.parse(firstController.text)*double.parse(firstController.text))).toStringAsFixed(2);
+
+                    setState(() {
 
                 });
               }, child:Text("Add")),
