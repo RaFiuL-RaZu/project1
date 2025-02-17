@@ -42,7 +42,23 @@ class _CalculatorState extends State<Calculator> {
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                   )
                 ),
-              )
+              ),
+              SizedBox(height: 30,),
+              TextField(
+                onChanged: (value){
+                  myText=value;
+                  log("======== $myText =====");
+                  setState(() {
+
+                  });
+                },
+                decoration: InputDecoration(
+                    labelText: "write cgpa",
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                    )
+                ),
+              ),
             ],
           ),
         ),
