@@ -1,5 +1,7 @@
 
 
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 class Calculator extends StatefulWidget {
@@ -10,6 +12,8 @@ class Calculator extends StatefulWidget {
 }
 
 class _CalculatorState extends State<Calculator> {
+  String myText =" ";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,9 +26,16 @@ class _CalculatorState extends State<Calculator> {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              Text("Hello",style: TextStyle(fontSize: 28,fontWeight: FontWeight.w800),),
+              Text(myText,style: TextStyle(fontSize: 28,fontWeight: FontWeight.w800),),
               SizedBox(height: 50,),
               TextField(
+                onChanged: (value){
+                  myText=value;
+                  log("======== $myText =====");
+                  setState(() {
+
+                  });
+                },
                 decoration: InputDecoration(
                   labelText: "write cgpa",
                   border: OutlineInputBorder(
