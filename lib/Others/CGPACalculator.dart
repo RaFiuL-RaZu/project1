@@ -13,6 +13,8 @@ class Calculator extends StatefulWidget {
 
 class _CalculatorState extends State<Calculator> {
   String myText =" ";
+  TextEditingController firstController=TextEditingController();
+  TextEditingController secondController=TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -29,13 +31,7 @@ class _CalculatorState extends State<Calculator> {
               Text(myText,style: TextStyle(fontSize: 28,fontWeight: FontWeight.w800),),
               SizedBox(height: 50,),
               TextField(
-                onChanged: (value){
-                  myText=value;
-                  log("======== $myText =====");
-                  setState(() {
-
-                  });
-                },
+                controller:firstController,
                 decoration: InputDecoration(
                   labelText: "write cgpa",
                   border: OutlineInputBorder(
@@ -45,13 +41,7 @@ class _CalculatorState extends State<Calculator> {
               ),
               SizedBox(height: 30,),
               TextField(
-                onChanged: (value){
-                  myText=value;
-                  log("======== $myText =====");
-                  setState(() {
-
-                  });
-                },
+                controller: secondController,
                 decoration: InputDecoration(
                     labelText: "write cgpa",
                     border: OutlineInputBorder(
@@ -59,6 +49,13 @@ class _CalculatorState extends State<Calculator> {
                     )
                 ),
               ),
+              SizedBox(height: 20,),
+              ElevatedButton(onPressed: (){
+                myText=(int.parse(firstController.text)+int.parse(secondController.text)).toString();
+                setState(() {
+
+                });
+              }, child:Text("Add")),
             ],
           ),
         ),
