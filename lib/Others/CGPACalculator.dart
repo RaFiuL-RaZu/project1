@@ -37,7 +37,11 @@ class _CalculatorState extends State<Calculator> {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              Text("CGPA : ${cgpa.toStringAsFixed(2)}",style: TextStyle(fontSize: 28,fontWeight: FontWeight.w800),),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text("Name : Imran Hossen",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w700),),
+              ),
+              Text("Total CGPA : ${cgpa.toStringAsFixed(3)}",style: TextStyle(fontSize: 28,fontWeight: FontWeight.w800),),
               SizedBox(height: 30,),
               Row(
                 children: [
@@ -150,10 +154,11 @@ class _CalculatorState extends State<Calculator> {
                   ),
                 ],
               ),
+              SizedBox(height: 80,),
               ElevatedButton(onPressed: (){
-                cgpa=(double.parse(controller1.text)*0.5)+
-                    (double.parse(controller2.text)*0.5)+
-                    (double.parse(controller3.text)*0.5)+
+                cgpa=(double.parse(controller1.text)*0.05)+
+                    (double.parse(controller2.text)*0.05)+
+                    (double.parse(controller3.text)*0.05)+
                     (double.parse(controller4.text)*0.10)+
                     (double.parse(controller5.text)*0.15)+
                     (double.parse(controller6.text)*0.20)+
@@ -162,7 +167,10 @@ class _CalculatorState extends State<Calculator> {
                     setState(() {
                     });
 
-              }, child:Text("Add GPA")),
+              }, child:Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text("Add GPA",style: TextStyle(fontSize: 20),),
+              )),
             ],
           ),
         ),
