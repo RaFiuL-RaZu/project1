@@ -38,7 +38,7 @@ class _HomePageDesihnState extends State<HomePageDesihn> {
                 child: Icon(Icons.call),
                 foregroundColor: Colors.white,
               ),
-              title: Text("RaFiuL Islam"),
+              title: Text("Imran Hossen"),
               subtitle: Text("01826851247"),
               trailing: Row(
                 mainAxisSize: MainAxisSize.min,
@@ -55,7 +55,7 @@ class _HomePageDesihnState extends State<HomePageDesihn> {
                 child: Icon(Icons.call),
                 foregroundColor: Colors.white,
               ),
-              title: Text("RaFiuL Islam"),
+              title: Text("Mamun Islam"),
               subtitle: Text("01826851247"),
               trailing: Row(
                 mainAxisSize: MainAxisSize.min,
