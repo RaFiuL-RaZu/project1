@@ -58,6 +58,36 @@ class _HomePageDesihnState extends State<HomePageDesihn> {
           Divider(
             thickness: 5,
           ),
+          SizedBox(height: 10,),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              children: [
+                Text("Service near me",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w700),),
+                Icon(Icons.arrow_forward_ios_outlined),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              children: [
+                Container(
+                  height: 150,
+                  width: 130,
+                  child: Column(
+                    children: [
+                      Icon(Icons.)
+                    ],
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    color: Colors.grey.shade400,
+                  ),
+                )
+              ],
+            ),
+          )
         ],
       ),
 
