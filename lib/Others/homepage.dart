@@ -39,6 +39,12 @@ class _HomePageDesihnState extends State<HomePageDesihn> {
               ),
               title: Text("Rafiul islam"),
               subtitle: Text("01826851247"),
+              trailing: Row(
+                children: [
+                  Text("15/12/2024"),
+                  Icon(Icons.perm_device_info),
+                ],
+              ),
             )
           ],
         ),
