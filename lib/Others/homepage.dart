@@ -37,37 +37,67 @@ class _HomePageDesihnState extends State<HomePageDesihn> {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                Container(
-                  height: 120,
-                  width: 150,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                        colors:[
-                      Color(0xff90AB57),
-                      Color(0xff76B267),
-                      Color(0xff59B876),
-                    ]),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Icon(Icons.assessment_outlined),
-                      Text("BMET Registration"),
-                      Text("Register into the databank and serach for jobs"),
-                    ],
-                  ),
-                ),
-              ],
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  RowCard(),
+                  SizedBox(width: 10,),
+                  RowCard(),
+                  SizedBox(width: 10,),
+                  RowCard(),
+                  SizedBox(width: 10,),
+                  RowCard(),
+                  SizedBox(width: 10,),
+                  RowCard(),
+                ],
+              ),
             ),
           )
         ],
       ),
 
+    );
+  }
+}
+
+class RowCard extends StatelessWidget {
+  const RowCard({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 120,
+      width: 200,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors:[
+          Color(0xff90AB57),
+          Color(0xff76B267),
+          Color(0xff59B876),
+        ]),
+        borderRadius: BorderRadius.all(Radius.circular(10)),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Icon(Icons.assessment_outlined,size: 45,color: Colors.white,),
+              SizedBox(height: 5,),
+              Text("BMET Registration",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600,color: Colors.white),),
+              SizedBox(height: 5,),
+              Text("Register into the databank and serach for jobs on the other hand",maxLines: 2,style: TextStyle(color: Colors.white),),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
