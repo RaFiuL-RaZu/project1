@@ -36,6 +36,7 @@ class _HomePageDesihnState extends State<HomePageDesihn> {
               leading: CircleAvatar(
                 radius: 20,
                 child: Icon(Icons.call),
+                foregroundColor: Colors.white,
               ),
               title: Text("RaFiuL Islam"),
               subtitle: Text("01826851247"),
@@ -47,7 +48,75 @@ class _HomePageDesihnState extends State<HomePageDesihn> {
                   Icon(Icons.perm_device_info),
                 ],
               ),
-            )
+            ),
+            ListTile(
+              leading: CircleAvatar(
+                radius: 20,
+                child: Icon(Icons.call),
+                foregroundColor: Colors.white,
+              ),
+              title: Text("RaFiuL Islam"),
+              subtitle: Text("01826851247"),
+              trailing: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text("15/12/2024"),
+                  SizedBox(width: 2,),
+                  Icon(Icons.perm_device_info),
+                ],
+              ),
+            ),
+            ListTile(
+              leading: CircleAvatar(
+                radius: 20,
+                child: Icon(Icons.call),
+                foregroundColor: Colors.white,
+              ),
+              title: Text("RaFiuL Islam"),
+              subtitle: Text("01826851247"),
+              trailing: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text("15/12/2024"),
+                  SizedBox(width: 2,),
+                  Icon(Icons.perm_device_info),
+                ],
+              ),
+            ),
+            ListTile(
+              leading: CircleAvatar(
+                radius: 20,
+                child: Icon(Icons.call),
+                foregroundColor: Colors.white,
+              ),
+              title: Text("RaFiuL Islam"),
+              subtitle: Text("01826851247"),
+              trailing: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text("15/12/2024"),
+                  SizedBox(width: 2,),
+                  Icon(Icons.perm_device_info),
+                ],
+              ),
+            ),
+            ListTile(
+              leading: CircleAvatar(
+                radius: 20,
+                child: Icon(Icons.call),
+                foregroundColor: Colors.white,
+              ),
+              title: Text("RaFiuL Islam"),
+              subtitle: Text("01826851247"),
+              trailing: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text("15/12/2024"),
+                  SizedBox(width: 2,),
+                  Icon(Icons.perm_device_info),
+                ],
+              ),
+            ),
           ],
         ),
       ),
