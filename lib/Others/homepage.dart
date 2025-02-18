@@ -13,9 +13,18 @@ class _HomePageDesihnState extends State<HomePageDesihn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: Column(
+          children:[
+            DrawerHeader(
+              decoration: BoxDecoration(color: Colors.blueAccent),
+            ),
+            ListTile(),
+          ],
+        ),
+      ),
       appBar: AppBar(
         centerTitle: true,
-        leading: Icon(Icons.menu),
         backgroundColor: Colors.white,
         foregroundColor: Color(0xff1B7B77),
         title:Text("Ami Probashi",style: TextStyle(fontSize: 20,fontWeight:FontWeight.w500),),
@@ -23,72 +32,241 @@ class _HomePageDesihnState extends State<HomePageDesihn> {
           Icon(Icons.mail),
         ],
       ),
-      body: Column(
-        children: [
-          SizedBox(height: 10,),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                Text("Your journey abroad",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w700),),
-                Icon(Icons.arrow_forward_ios_outlined),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(height: 10,),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
               child: Row(
                 children: [
-                  RowCard(),
-                  SizedBox(width: 10,),
-                  RowCard(),
-                  SizedBox(width: 10,),
-                  RowCard(),
-                  SizedBox(width: 10,),
-                  RowCard(),
-                  SizedBox(width: 10,),
-                  RowCard(),
+                  Text("Your journey abroad",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w700),),
+                  Icon(Icons.arrow_forward_ios_outlined),
                 ],
               ),
             ),
-          ),
-          SizedBox(height: 10,),
-          Divider(
-            thickness: 5,
-          ),
-          SizedBox(height: 10,),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                Text("Service near me",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w700),),
-                Icon(Icons.arrow_forward_ios_outlined),
-              ],
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    RowCard(),
+                    SizedBox(width: 10,),
+                    RowCard(),
+                    SizedBox(width: 10,),
+                    RowCard(),
+                    SizedBox(width: 10,),
+                    RowCard(),
+                    SizedBox(width: 10,),
+                    RowCard(),
+                  ],
+                ),
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                Container(
-                  height: 150,
-                  width: 130,
-                  child: Column(
-                    children: [
-                      Icon(Icons.)
-                    ],
-                  ),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                    color: Colors.grey.shade400,
-                  ),
-                )
-              ],
+            SizedBox(height: 10,),
+            Divider(
+              thickness: 5,
             ),
-          )
-        ],
+            SizedBox(height: 10,),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Text("Service near me",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w700),),
+                  Icon(Icons.arrow_forward_ios_outlined),
+                  Spacer(),
+                  Text("View all(10)",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w700),),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SingleChildScrollView(
+                scrollDirection:Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
+                      height: 150,
+                      width: 130,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Icon(Icons.assessment,size: 50,color: Colors.blueGrey,),
+                          ),
+                          Text("Resume builder",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),),
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        color: Colors.grey.shade200,
+                      ),
+                    ),
+                    SizedBox(width: 10,),
+                    Container(
+                      height: 150,
+                      width: 130,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Image.network("https://png.pngtree.com/png-clipart/20210129/ourmid/pngtree-online-doctor-png-image_2803696.jpg",height: 100,),
+                          ),
+                          Text("Online doctor",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),),
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        color: Colors.grey.shade200,
+                      ),
+                    ),
+                    SizedBox(width: 10,),
+                    Container(
+                      height: 150,
+                      width: 130,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                            Image.network("https://apkrabi.com/uploads/2024/9/ami-probashi-mod-apk.jpg",height:150,width:double.infinity,),
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        color: Colors.grey.shade200,
+                      ),
+                    ),
+                    SizedBox(width: 10,),
+                    Container(
+                      height: 150,
+                      width: 130,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Icon(Icons.assessment,size: 50,color: Colors.blueGrey,),
+                          ),
+                          Text("Resume builder",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),),
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        color: Colors.grey.shade200,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(height: 10,),
+            Divider(
+              thickness: 5,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Text("Help center",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w700),),
+                  Icon(Icons.arrow_forward_ios_outlined),
+                  Spacer(),
+                  Text("View all(5)",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w700),),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SingleChildScrollView(
+                scrollDirection:Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
+                      height: 150,
+                      width: 130,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Icon(Icons.assessment,size: 50,color: Colors.blueGrey,),
+                          ),
+                          Text("Resume builder",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),),
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        color: Colors.grey.shade200,
+                      ),
+                    ),
+                    SizedBox(width: 10,),
+                    Container(
+                      height: 150,
+                      width: 130,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Image.network("https://png.pngtree.com/png-clipart/20210129/ourmid/pngtree-online-doctor-png-image_2803696.jpg",height: 100,),
+                          ),
+                          Text("Online doctor",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),),
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        color: Colors.grey.shade200,
+                      ),
+                    ),
+                    SizedBox(width: 10,),
+                    Container(
+                      height: 150,
+                      width: 130,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.network("https://apkrabi.com/uploads/2024/9/ami-probashi-mod-apk.jpg",height:150,width:double.infinity,),
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        color: Colors.grey.shade200,
+                      ),
+                    ),
+                    SizedBox(width: 10,),
+                    Container(
+                      height: 150,
+                      width: 130,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Icon(Icons.assessment,size: 50,color: Colors.blueGrey,),
+                          ),
+                          Text("Resume builder",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),),
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        color: Colors.grey.shade200,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
 
     );
