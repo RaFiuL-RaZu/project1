@@ -17,14 +17,19 @@ class _HomePageDesihnState extends State<HomePageDesihn> {
         child: Column(
           children: [
             DrawerHeader(
-              decoration: BoxDecoration(color: Colors.blueAccent),
+              decoration: BoxDecoration(color: Colors.greenAccent),
                 child:Row(
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.person,color: Colors.white,size: 50,),
+                        CircleAvatar(
+                          radius: 30,
+                          child: Icon(Icons.person,size: 40,),
+                          backgroundColor: Colors.white,
+                        ),
+                        SizedBox(height: 5,),
                         Text("RaFiuL Razu"),
                         Text("Computer technology"),
                       ],
