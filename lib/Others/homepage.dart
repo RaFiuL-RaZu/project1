@@ -35,10 +35,9 @@ class _HomePageDesihnState extends State<HomePageDesihn> {
             ListTile(
               leading: CircleAvatar(
                 radius: 20,
-                backgroundColor: Colors.blueAccent,
                 child: Icon(Icons.call),
               ),
-              title: Text("Rafiul islam"),
+              title: Text("RaFiuL Islam"),
               subtitle: Text("01826851247"),
               trailing: Row(
                 mainAxisSize: MainAxisSize.min,
