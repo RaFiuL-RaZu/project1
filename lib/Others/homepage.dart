@@ -15,11 +15,31 @@ class _HomePageDesihnState extends State<HomePageDesihn> {
     return Scaffold(
       drawer: Drawer(
         child: Column(
-          children:[
+          children: [
             DrawerHeader(
               decoration: BoxDecoration(color: Colors.blueAccent),
+                child:Row(
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.person,color: Colors.white,size: 50,),
+                        Text("RaFiuL Razu"),
+                        Text("Computer technology"),
+                      ],
+                    ),
+                  ],
+                )
             ),
-            ListTile(),
+            ListTile(
+              leading: CircleAvatar(
+                radius: 20,
+                backgroundColor: Colors.blueAccent,
+              ),
+              title: Text("Rafiul islam"),
+              subtitle: Text("01826851247"),
+            )
           ],
         ),
       ),
