@@ -53,6 +53,8 @@ class _HomePageDesihnState extends State<HomePageDesihn> {
                     ]),
                   ),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Icon(Icons.assessment_outlined),
                       Text("BMET Registration"),
