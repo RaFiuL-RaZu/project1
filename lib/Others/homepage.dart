@@ -53,7 +53,11 @@ class _HomePageDesihnState extends State<HomePageDesihn> {
                 ],
               ),
             ),
-          )
+          ),
+          SizedBox(height: 10,),
+          Divider(
+            thickness: 5,
+          ),
         ],
       ),
 
@@ -69,7 +73,7 @@ class RowCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 120,
+      height: 150,
       width: 200,
       decoration: BoxDecoration(
         gradient: LinearGradient(
