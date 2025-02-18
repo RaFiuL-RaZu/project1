@@ -35,15 +35,33 @@ class _HomePageDesihnState extends State<HomePageDesihn> {
               ],
             ),
           ),
-          Row(
-            children: [
-              Container(
-                height: 100,
-                width: 100,
-                color: Colors.green,
-
-              )
-            ],
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              children: [
+                Container(
+                  height: 120,
+                  width: 150,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors:[
+                      Color(0xff90AB57),
+                      Color(0xff76B267),
+                      Color(0xff59B876),
+                    ]),
+                  ),
+                  child: Column(
+                    children: [
+                      Icon(Icons.assessment_outlined),
+                      Text("BMET Registration"),
+                      Text("Register into the databank and serach for jobs"),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           )
         ],
       ),
