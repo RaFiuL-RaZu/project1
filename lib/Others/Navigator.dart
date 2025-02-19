@@ -1,4 +1,6 @@
 
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 class NavigatorPage extends StatefulWidget {
@@ -22,10 +24,13 @@ class _NavigatorPageState extends State<NavigatorPage> {
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.white,
         iconSize: 30,
+        currentIndex: 0,
+        onTap: (value){
+          log("======== ${value}");
+        },
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.work),label: "Jobs"),
-
           BottomNavigationBarItem(icon: Icon(Icons.person),label: "Profile"),
         ],
       ),
