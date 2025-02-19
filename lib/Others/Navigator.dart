@@ -21,6 +21,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
         backgroundColor: Colors.amber,
         title: Text("NavigationBar"),
       ),
+      body: index==0?Text("Zero"):index==1?Text("one"):Text("two"),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.amber,
         selectedItemColor: Colors.white,
