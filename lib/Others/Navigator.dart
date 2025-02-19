@@ -11,29 +11,20 @@ class NavigatorPage extends StatefulWidget {
 }
 
 class _NavigatorPageState extends State<NavigatorPage> {
-
-  int index=0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
+        title: Text("NavigatorBar"),
         backgroundColor: Colors.amber,
-        title: Text("NavigationBar"),
       ),
-      body: index==0?Text("Zero"):index==1?Text("one"):Text("two"),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.amber,
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.white,
-        iconSize: 30,
-        currentIndex: index,
         onTap: (value){
-          log("======== ${value}");
-          setState(() {
-
-          });
-          index=value;
+          log("======== ${value}======");
         },
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
