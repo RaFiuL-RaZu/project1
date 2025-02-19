@@ -21,6 +21,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
         backgroundColor: Colors.amber,
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.white,
+        iconSize: 30,
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.work),label: "Jobs"),
