@@ -2,6 +2,8 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:project1/Others/Loginpage.dart';
+import 'package:project1/Others/SingupPage.dart';
 
 class NavigatorPage extends StatefulWidget {
   const NavigatorPage({Key? key}) : super(key: key);
@@ -14,8 +16,8 @@ class _NavigatorPageState extends State<NavigatorPage> {
   int index=0;
 
   List<Widget> screnList=[
-    Text("0"),
-    Text("1"),
+    HomeActivity(),
+    HomeScren(),
     Text("2"),
   ];
 
@@ -28,6 +30,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
         backgroundColor: Colors.amber,
       ),
       body:screnList[index],
+
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.amber,
         selectedItemColor: Colors.white,
@@ -36,7 +39,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
           log("======== ${value}======");
           index=value;
         },
-        currentIndex: 2,
+        currentIndex:index,
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.work),label: "Jobs"),
