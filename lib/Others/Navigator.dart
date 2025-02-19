@@ -38,6 +38,9 @@ class _NavigatorPageState extends State<NavigatorPage> {
         onTap: (value){
           log("======== ${value}======");
           index=value;
+          setState(() {
+
+          });
         },
         currentIndex:index,
         items: [
