@@ -13,6 +13,12 @@ class NavigatorPage extends StatefulWidget {
 class _NavigatorPageState extends State<NavigatorPage> {
   int index=0;
 
+  List<Widget> screnList=[
+    Text("0"),
+    Text("1"),
+    Text("2"),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +27,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
         title: Text("NavigatorBar"),
         backgroundColor: Colors.amber,
       ),
-      body: index==0?Text("0"):index==1?Text("1"):Text("2"),
+      body:screnList[index],
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.amber,
         selectedItemColor: Colors.white,
@@ -30,6 +36,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
           log("======== ${value}======");
           index=value;
         },
+        currentIndex: 2,
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.work),label: "Jobs"),
