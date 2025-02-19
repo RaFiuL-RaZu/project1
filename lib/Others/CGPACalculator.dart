@@ -35,143 +35,145 @@ class _CalculatorState extends State<Calculator> {
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text("Name : Razu",style: TextStyle(fontSize: 28,fontWeight: FontWeight.w800),),
-              ),
-              Text("Total CGPA : ${cgpa.toStringAsFixed(3)}",style: TextStyle(fontSize: 28,fontWeight: FontWeight.w800),),
-              SizedBox(height: 30,),
-              Row(
-                children: [
-                  Expanded(
-                    child: TextField(
-                      controller:controller1,
-                      decoration: InputDecoration(
-                          labelText: "1st Semester",
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(10)),
-                          )
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("Name : Razu",style: TextStyle(fontSize: 28,fontWeight: FontWeight.w800),),
+                ),
+                Text("Total CGPA : ${cgpa.toStringAsFixed(3)}",style: TextStyle(fontSize: 28,fontWeight: FontWeight.w800),),
+                SizedBox(height: 30,),
+                Row(
+                  children: [
+                    Expanded(
+                      child: TextField(
+                        controller:controller1,
+                        decoration: InputDecoration(
+                            labelText: "1st Semester",
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                            )
+                        ),
                       ),
                     ),
-                  ),
-                  SizedBox(width: 100,),
-                  Expanded(
-                    child: TextField(
-                      controller:controller2,
-                      decoration: InputDecoration(
-                          labelText: "2nd Semester",
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(10)),
-                          )
+                    SizedBox(width: 100,),
+                    Expanded(
+                      child: TextField(
+                        controller:controller2,
+                        decoration: InputDecoration(
+                            labelText: "2nd Semester",
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                            )
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 30,),
-              Row(
-                children: [
-                  Expanded(
-                    child: TextField(
-                      controller:controller3,
-                      decoration: InputDecoration(
-                          labelText: "3rd Semester",
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(10)),
-                          )
+                  ],
+                ),
+                SizedBox(height: 30,),
+                Row(
+                  children: [
+                    Expanded(
+                      child: TextField(
+                        controller:controller3,
+                        decoration: InputDecoration(
+                            labelText: "3rd Semester",
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                            )
+                        ),
                       ),
                     ),
-                  ),
-                  SizedBox(width: 100,),
-                  Expanded(
-                    child: TextField(
-                      controller:controller4,
-                      decoration: InputDecoration(
-                          labelText: "4th Semester",
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(10)),
-                          )
+                    SizedBox(width: 100,),
+                    Expanded(
+                      child: TextField(
+                        controller:controller4,
+                        decoration: InputDecoration(
+                            labelText: "4th Semester",
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                            )
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 30,),
-              Row(
-                children: [
-                  Expanded(
-                    child: TextField(
-                      controller:controller5,
-                      decoration: InputDecoration(
-                          labelText: "5th Semester",
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(10)),
-                          )
+                  ],
+                ),
+                SizedBox(height: 30,),
+                Row(
+                  children: [
+                    Expanded(
+                      child: TextField(
+                        controller:controller5,
+                        decoration: InputDecoration(
+                            labelText: "5th Semester",
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                            )
+                        ),
                       ),
                     ),
-                  ),
-                  SizedBox(width: 100,),
-                  Expanded(
-                    child: TextField(
-                      controller:controller6,
-                      decoration: InputDecoration(
-                          labelText: "6th Semester",
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(10)),
-                          )
+                    SizedBox(width: 100,),
+                    Expanded(
+                      child: TextField(
+                        controller:controller6,
+                        decoration: InputDecoration(
+                            labelText: "6th Semester",
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                            )
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 30,),
-              Row(
-                children: [
-                  Expanded(
-                    child: TextField(
-                      controller:controller7,
-                      decoration: InputDecoration(
-                          labelText: "7th Semester",
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(10)),
-                          )
+                  ],
+                ),
+                SizedBox(height: 30,),
+                Row(
+                  children: [
+                    Expanded(
+                      child: TextField(
+                        controller:controller7,
+                        decoration: InputDecoration(
+                            labelText: "7th Semester",
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                            )
+                        ),
                       ),
                     ),
-                  ),
-                  SizedBox(width: 100,),
-                  Expanded(
-                    child: TextField(
-                      controller:controller8,
-                      decoration: InputDecoration(
-                          labelText: "8th Semester",
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(10)),
-                          )
+                    SizedBox(width: 100,),
+                    Expanded(
+                      child: TextField(
+                        controller:controller8,
+                        decoration: InputDecoration(
+                            labelText: "8th Semester",
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                            )
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 80,),
-              ElevatedButton(onPressed: (){
-                cgpa=(double.parse(controller1.text)*0.05)+
-                    (double.parse(controller2.text)*0.05)+
-                    (double.parse(controller3.text)*0.05)+
-                    (double.parse(controller4.text)*0.10)+
-                    (double.parse(controller5.text)*0.15)+
-                    (double.parse(controller6.text)*0.20)+
-                    (double.parse(controller7.text)*0.25)+
-                    (double.parse(controller8.text)*0.15);
-                    setState(() {
-                    });
+                  ],
+                ),
+                SizedBox(height: 80,),
+                ElevatedButton(onPressed: (){
+                  cgpa=(double.parse(controller1.text)*0.05)+
+                      (double.parse(controller2.text)*0.05)+
+                      (double.parse(controller3.text)*0.05)+
+                      (double.parse(controller4.text)*0.10)+
+                      (double.parse(controller5.text)*0.15)+
+                      (double.parse(controller6.text)*0.20)+
+                      (double.parse(controller7.text)*0.25)+
+                      (double.parse(controller8.text)*0.15);
+                      setState(() {
+                      });
 
-              }, child:Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text("Add GPA",style: TextStyle(fontSize: 20),),
-              )),
-            ],
+                }, child:Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("Add GPA",style: TextStyle(fontSize: 20),),
+                )),
+              ],
+            ),
           ),
         ),
       ),

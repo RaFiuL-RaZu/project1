@@ -2,6 +2,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:project1/Others/CGPACalculator.dart';
 import 'package:project1/Others/Loginpage.dart';
 import 'package:project1/Others/SingupPage.dart';
 
@@ -18,7 +19,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
   List<Widget> screnList=[
     HomeActivity(),
     HomeScren(),
-    Text("2"),
+    Calculator(),
   ];
 
   @override
