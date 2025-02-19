@@ -13,8 +13,17 @@ class _NavigatorPageState extends State<NavigatorPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Colors.amber,
         title: Text("NavigationBar"),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.work),label: "Jobs"),
+
+          BottomNavigationBarItem(icon: Icon(Icons.person),label: "Profile"),
+        ],
       ),
     );
   }
