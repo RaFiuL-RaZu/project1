@@ -3,6 +3,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project1/Others/CGPACalculator.dart';
+import 'package:project1/Others/Loginpage.dart';
+import 'package:project1/Others/Navigator.dart';
 import 'package:project1/Others/homepage.dart';
 
 main(){
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget{
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePageDesihn(),
+      home: NavigatorPage(),
     );
   }
 
