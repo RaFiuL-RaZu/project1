@@ -39,7 +39,6 @@ class _NavigatorPageState extends State<NavigatorPage> {
           log("======== ${value}======");
           index=value;
           setState(() {
-
           });
         },
         currentIndex:index,
