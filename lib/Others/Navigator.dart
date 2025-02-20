@@ -15,7 +15,6 @@ class NavigatorPage extends StatefulWidget {
 
 class _NavigatorPageState extends State<NavigatorPage> {
   int index=0;
-  int counter=0;
 
   List<Widget> screnList=[
     HomeActivity(),
@@ -31,7 +30,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
         title: Text("NavigatorBar"),
         backgroundColor: Colors.amber,
       ),
-      body:Center(child: Text("${counter}"),),
+      body:screnList[index],
 
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.amber,
@@ -50,12 +49,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
           BottomNavigationBarItem(icon: Icon(Icons.person),label: "Profile"),
         ],
       ),
-      floatingActionButton:FloatingActionButton(onPressed: (){
-        counter++;
-        setState(() {
-
-        });
-      },child: Icon(Icons.add),) ,
+      floatingActionButton:FloatingActionButton(onPressed: (){},child: Icon(Icons.add),) ,
     );
   }
 }
