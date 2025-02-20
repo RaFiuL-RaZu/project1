@@ -133,7 +133,7 @@ class HomeScren extends StatelessWidget {
                               Row(
                                 children: [
                                   TextButton(onPressed: (){}, child: Text("Forgot Password ?",style: TextStyle(color: Colors.black87),)),
-                                  SizedBox(width: 190,),
+                                  Spacer(),
                                   TextButton(onPressed: (){}, child: Text("Create an account",style: TextStyle(color: Colors.black87),)),
                                 ],
 
