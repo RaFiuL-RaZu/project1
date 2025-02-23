@@ -26,10 +26,11 @@ class _RadioListDropState extends State<RadioListDrop> {
         title: Text("DropDown "),
       ),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text("Which is the capital in Bangladesh ?")
+          Container(padding: EdgeInsets.all(20),
+      child: Text("Which is the capital in Bangladesh ?")),
           RadioListTile<int>(
             title: Text("Dhaka"),
               value: 1,
