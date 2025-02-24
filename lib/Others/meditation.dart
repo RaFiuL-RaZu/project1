@@ -14,6 +14,8 @@ class _MeditaionAppState extends State<MeditaionApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:AppBar(
+        backgroundColor: Colors.black,
+        foregroundColor:Colors.white,
         title: Text("Discover"),
         actions: [
           Icon(Icons.search),
