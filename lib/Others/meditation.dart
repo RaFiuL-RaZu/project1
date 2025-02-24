@@ -16,9 +16,12 @@ class _MeditaionAppState extends State<MeditaionApp> {
       appBar:AppBar(
         backgroundColor: Colors.black,
         foregroundColor:Colors.white,
-        title: Text("Discover"),
+        title: Text("Discover",style: TextStyle(fontWeight: FontWeight.w800),),
         actions: [
-          Icon(Icons.search),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Icon(Icons.search,size: 30,),
+          ),
         ],
       ) ,
     );
