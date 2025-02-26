@@ -43,6 +43,14 @@ class _MeditaionAppState extends State<MeditaionApp> {
                     ],
                   ),
                 ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text("Welcome back",style: TextStyle(color: Colors.white,fontSize:16,fontWeight: FontWeight.w800),),
+                    Text("Let's find",style: TextStyle(fontSize: 30,fontWeight: FontWeight.w800,color: Colors.white),),
+                    Text("Your top doctor!",style: TextStyle(fontSize: 30,fontWeight: FontWeight.w800,color: Colors.white),),
+                  ],
+                )
               ],
             ),
           )
