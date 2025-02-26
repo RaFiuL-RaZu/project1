@@ -12,32 +12,20 @@ class MeditaionApp extends StatefulWidget {
 class _MeditaionAppState extends State<MeditaionApp> {
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-        length: 8,
-        child: Scaffold(
-          appBar:AppBar(
-            backgroundColor: Colors.black,
-            foregroundColor:Colors.white,
-            title: Text("Discover",style: TextStyle(fontWeight: FontWeight.w800),),
-            actions: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Icon(Icons.search,size: 30,),
-              ),
-            ],
-            bottom: TabBar(
-
-                tabs: [
-                  Tab(text: "Insomnia",),
-                  Tab(text: "Drag",),
-                  Tab(text: "Captul",),
-                  Tab(text: "Medicine",),
-                  Tab(text: "Insomnia",),
-                  Tab(text: "Insomnia",),
-                ]),
-          ) ,
-
-        )
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Column(
+        children: [
+          Container(
+            height:250 ,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              color: Colors.deepPurple,
+              borderRadius: BorderRadius.only(bottomLeft:Radius.circular(25),bottomRight: Radius.circular(25) ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
