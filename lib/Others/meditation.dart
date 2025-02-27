@@ -301,11 +301,11 @@ class _MeditaionAppState extends State<MeditaionApp> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(30),
                         child: Image.network(
-                            "https://st5.depositphotos.com/62628780/64614/i/1600/depositphotos_646145652-stock-photo-medical-doctor-portrait-man-stethoscope.jpg"),
+                            "https://www.shutterstock.com/image-photo/portrait-beautiful-mature-woman-doctor-600nw-1680655153.jpg"),
                       ),
                     ),
                     title: Text("Dr. Tasnim zara",style: TextStyle(color: Colors.white,fontSize: 22),),
-                    subtitle: Text("MBBS,BCS cardiology from England",style: TextStyle(color: Colors.white),),
+                    subtitle: Text("Mother and child consultant Speacilist",style: TextStyle(color: Colors.white),),
         
                   ),
         
@@ -327,14 +327,14 @@ class _MeditaionAppState extends State<MeditaionApp> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(30),
                         child: Image.network(
-                            "https://www.shutterstock.com/image-photo/portrait-beautiful-mature-woman-doctor-600nw-1680655153.jpg"),
+                            "https://st5.depositphotos.com/62628780/64614/i/1600/depositphotos_646145652-stock-photo-medical-doctor-portrait-man-stethoscope.jpg"),
                       ),
                     ),
-                    title: Text("Dr. Tasnim zara",style: TextStyle(color: Colors.white,fontSize: 22),),
-                    subtitle: Text("Mother and child consultant Speacilist",style: TextStyle(color: Colors.white),),
-        
+                    title: Text("Dr.Mezbaul Hauqe",style: TextStyle(color: Colors.white,fontSize: 22),),
+                    subtitle: Text("MBBS,BCS cardiology from England",style: TextStyle(color: Colors.white),),
+
                   ),
-        
+
                 ),
                 decoration: BoxDecoration(
                   color: Colors.deepPurple,
