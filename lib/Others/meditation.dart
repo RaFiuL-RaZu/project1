@@ -84,8 +84,18 @@ class _MeditaionAppState extends State<MeditaionApp> {
                       fillColor: Colors.white,
                       hintText: "Search helth issue....",
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(15),
+                        borderSide: BorderSide(color: Colors.white),
                       ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                        borderSide: BorderSide(color: Colors.white),
+                      ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+
                       prefixIcon: IconButton(
                           onPressed: () {}, icon: Icon(Icons.search,color: Colors.white,)),
                     ),
