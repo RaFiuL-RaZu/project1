@@ -16,7 +16,7 @@ class _MeditaionAppState extends State<MeditaionApp> {
       backgroundColor: Colors.white,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.start,
+
         children: [
           Container(
             height:250 ,
@@ -26,11 +26,12 @@ class _MeditaionAppState extends State<MeditaionApp> {
               borderRadius: BorderRadius.only(bottomLeft:Radius.circular(25),bottomRight: Radius.circular(25) ),
             ),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Icon(Icons.menu),
                       Spacer(),
@@ -43,17 +44,20 @@ class _MeditaionAppState extends State<MeditaionApp> {
                     ],
                   ),
                 ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Text("Welcome back",style: TextStyle(color: Colors.white,fontSize:16,fontWeight: FontWeight.w800),),
-                    Text("Let's find",style: TextStyle(fontSize: 30,fontWeight: FontWeight.w800,color: Colors.white),),
-                    Text("Your top doctor!",style: TextStyle(fontSize: 30,fontWeight: FontWeight.w800,color: Colors.white),),
-                  ],
-                )
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Welcome back",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.white),),
+                      Text("Let's find",style: TextStyle(fontSize: 30,fontWeight: FontWeight.w800,color: Colors.white),),
+                      Text("Your top doctor",style: TextStyle(fontSize: 30,fontWeight: FontWeight.w800,color: Colors.white),),
+                    ],
+                  ),
+                ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
