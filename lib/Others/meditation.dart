@@ -13,6 +13,7 @@ class _MeditaionAppState extends State<MeditaionApp> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -104,11 +105,11 @@ class _MeditaionAppState extends State<MeditaionApp> {
               ),
             ),
             SizedBox(
-              height: 50,
+              height:30,
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text("Categories"),
+              child: Text("Categories",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w700),),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -397,6 +398,13 @@ class _MeditaionAppState extends State<MeditaionApp> {
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(items: [
+        BottomNavigationBarItem(icon:Icon(Icons.home),label: 'Home'),
+        BottomNavigationBarItem(icon:Icon(Icons.chat),label: 'Chats'),
+        BottomNavigationBarItem(icon:Icon(Icons.call),label: 'Call'),
+      ]
+      ),
+
     );
   }
 }
