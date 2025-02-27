@@ -75,25 +75,27 @@ class _MeditaionAppState extends State<MeditaionApp> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: TextField(
-                    cursorColor: Colors.white,
-                    decoration: InputDecoration(
-                      hintStyle: TextStyle(
-                        color: Colors.white,
-                      ),
-                      fillColor: Colors.white,
-                      hintText: "Search helth issue....",
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15),
-                        borderSide: BorderSide(color: Colors.white),
-                      ),
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white),
-                          borderRadius: BorderRadius.circular(15),
+                  child: Container(
+                    child: TextField(
+                      cursorColor: Colors.white,
+                      decoration: InputDecoration(
+                        hintStyle: TextStyle(
+                          color: Colors.white,
                         ),
+                        fillColor: Colors.white,
+                        hintText: "Search helth issue....",
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                          borderSide: BorderSide(color: Colors.white),
+                        ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.white),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
 
-                      prefixIcon: IconButton(
-                          onPressed: () {}, icon: Icon(Icons.search,color: Colors.white,)),
+                        prefixIcon: IconButton(
+                            onPressed: () {}, icon: Icon(Icons.search,color: Colors.white,)),
+                      ),
                     ),
                   ),
                 ),
@@ -111,20 +113,125 @@ class _MeditaionAppState extends State<MeditaionApp> {
             padding: const EdgeInsets.all(8.0),
             child: Row(
               children: [
-                Container(
-                  height: 70,
-                  width: 70,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    color: Colors.white,
-                    boxShadow:[
-                      BoxShadow(
-                        color: Colors.grey,
-                        spreadRadius:1,
-                      )
-                    ]
-                  ),
-                )
+                Column(
+                  children: [
+                    Container(
+                      child: Icon(Icons.heart_broken,color: Colors.red,size: 40,),
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: Colors.white,
+                        boxShadow:[
+                          BoxShadow(
+                            color: Colors.grey,
+                            spreadRadius:1,
+                          )
+                        ]
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text("All"),
+                    ),
+                  ],
+                ),
+                SizedBox(width:20,),
+                Column(
+                  children: [
+                    Container(
+                      child: Icon(Icons.heart_broken,color: Colors.red,size: 40,),
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          color: Colors.white,
+                          boxShadow:[
+                            BoxShadow(
+                              color: Colors.grey,
+                              spreadRadius:1,
+                            )
+                          ]
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text("All"),
+                    ),
+                  ],
+                ),
+                SizedBox(width:20,),
+                Column(
+                  children: [
+                    Container(
+                      child: Icon(Icons.heart_broken,color: Colors.red,size: 40,),
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          color: Colors.white,
+                          boxShadow:[
+                            BoxShadow(
+                              color: Colors.grey,
+                              spreadRadius:1,
+                            )
+                          ]
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text("All"),
+                    ),
+                  ],
+                ),
+                SizedBox(width:20,),
+                Column(
+                  children: [
+                    Container(
+                      child: Icon(Icons.heart_broken,color: Colors.red,size: 40,),
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          color: Colors.white,
+                          boxShadow:[
+                            BoxShadow(
+                              color: Colors.grey,
+                              spreadRadius:1,
+                            )
+                          ]
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text("All"),
+                    ),
+                  ],
+                ),
+                SizedBox(width:20,),
+                Column(
+                  children: [
+                    Container(
+                      child: Icon(Icons.heart_broken,color: Colors.red,size: 40,),
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          color: Colors.white,
+                          boxShadow:[
+                            BoxShadow(
+                              color: Colors.grey,
+                              spreadRadius:1,
+                            )
+                          ]
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text("All"),
+                    ),
+                  ],
+                ),
               ],
             ),
           )
