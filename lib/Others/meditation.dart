@@ -16,7 +16,7 @@ class _MeditaionAppState extends State<MeditaionApp> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            height: 250,
+            height: 260,
             width: double.infinity,
             decoration: BoxDecoration(
               color: Colors.deepPurple,
@@ -100,6 +100,34 @@ class _MeditaionAppState extends State<MeditaionApp> {
               ],
             ),
           ),
+          SizedBox(
+            height: 50,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("Categories"),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              children: [
+                Container(
+                  height: 70,
+                  width: 70,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: Colors.white,
+                    boxShadow:[
+                      BoxShadow(
+                        color: Colors.grey,
+                        spreadRadius:1,
+                      )
+                    ]
+                  ),
+                )
+              ],
+            ),
+          )
         ],
       ),
     );
