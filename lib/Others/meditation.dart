@@ -111,39 +111,17 @@ class _MeditaionAppState extends State<MeditaionApp> {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                Column(
-                  children: [
-                    Container(
-                      child: Image.asset("assets/doctor.png"),
-                      height: 50,
-                      width: 50,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: Colors.white,
-                        boxShadow:[
-                          BoxShadow(
-                            color: Colors.grey,
-                            spreadRadius:1,
-                          )
-                        ]
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text("All"),
-                    ),
-                  ],
-                ),
-                SizedBox(width:20,),
-                Column(
-                  children: [
-                    Container(
-                      child: Icon(Icons.heart_broken_rounded,color: Colors.red,size: 40,),
-                      height: 50,
-                      width: 50,
-                      decoration: BoxDecoration(
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Column(
+                    children: [
+                      Container(
+                        child: Image.asset("assets/doctor.png"),
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
                           color: Colors.white,
                           boxShadow:[
@@ -152,89 +130,162 @@ class _MeditaionAppState extends State<MeditaionApp> {
                               spreadRadius:1,
                             )
                           ]
+                        ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text("Cardiology"),
-                    ),
-                  ],
-                ),
-                SizedBox(width:20,),
-                Column(
-                  children: [
-                    Container(
-                      child: Image.asset("assets/drugs.png"),
-                      height: 50,
-                      width: 50,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12),
-                          color: Colors.white,
-                          boxShadow:[
-                            BoxShadow(
-                              color: Colors.grey,
-                              spreadRadius:1,
-                            )
-                          ]
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text("All"),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text("medicine"),
-                    ),
-                  ],
-                ),
-                SizedBox(width:20,),
-                Column(
-                  children: [
-                    Container(
-                      child: Image.asset("assets/drugs(1).png"),
-                      height: 50,
-                      width: 50,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12),
-                          color: Colors.white,
-                          boxShadow:[
-                            BoxShadow(
-                              color: Colors.grey,
-                              spreadRadius:1,
-                            )
-                          ]
+                    ],
+                  ),
+                  SizedBox(width:20,),
+                  Column(
+                    children: [
+                      Container(
+                        child:Image.asset("assets/cardiology.png") ,
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            color: Colors.white,
+                            boxShadow:[
+                              BoxShadow(
+                                color: Colors.grey,
+                                spreadRadius:1,
+                              )
+                            ]
+                        ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text("general"),
-                    ),
-                  ],
-                ),
-                SizedBox(width:20,),
-                Column(
-                  children: [
-                    Container(
-                      child:Image.asset("assets/family.png"),
-                      height: 50,
-                      width: 50,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12),
-                          color: Colors.white,
-                          boxShadow:[
-                            BoxShadow(
-                              color: Colors.grey,
-                              spreadRadius:1,
-                            )
-                          ]
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text("Cardiology"),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text("family"),
-                    ),
-                  ],
-                ),
-              ],
+                    ],
+                  ),
+                  SizedBox(width:20,),
+                  Column(
+                    children: [
+                      Container(
+                        child: Image.asset("assets/drugs.png"),
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            color: Colors.white,
+                            boxShadow:[
+                              BoxShadow(
+                                color: Colors.grey,
+                                spreadRadius:1,
+                              )
+                            ]
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text("medicine"),
+                      ),
+                    ],
+                  ),
+                  SizedBox(width:20,),
+                  Column(
+                    children: [
+                      Container(
+                        child: Image.asset("assets/medi.png"),
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            color: Colors.white,
+                            boxShadow:[
+                              BoxShadow(
+                                color: Colors.grey,
+                                spreadRadius:1,
+                              )
+                            ]
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text("general"),
+                      ),
+                    ],
+                  ),
+                  SizedBox(width:20,),
+                  Column(
+                    children: [
+                      Container(
+                        child:Image.asset("assets/family.png"),
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            color: Colors.white,
+                            boxShadow:[
+                              BoxShadow(
+                                color: Colors.grey,
+                                spreadRadius:1,
+                              )
+                            ]
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text("family"),
+                      ),
+                    ],
+                  ),
+                  SizedBox(width:20,),
+                  Column(
+                    children: [
+                      Container(
+                        child:Image.asset("assets/mental-state.png"),
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            color: Colors.white,
+                            boxShadow:[
+                              BoxShadow(
+                                color: Colors.grey,
+                                spreadRadius:1,
+                              )
+                            ]
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text("family"),
+                      ),
+                    ],
+                  ),
+
+                ],
+              ),
             ),
-          )
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 80,
+              width: double.infinity,
+              child: Center(
+                child: ListTile(
+                  leading:CircleAvatar(
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Image.network(
+                          "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"),
+                    ),
+                  ),
+                ),
+
+              ),
+              decoration: BoxDecoration(
+                color: Colors.grey,
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+          ),
         ],
       ),
     );
