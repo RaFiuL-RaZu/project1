@@ -27,7 +27,7 @@ class _NextpageDesignState extends State<NextpageDesign> {
             Text("Dr.RaFiuL"),
             Chip(
 
-                label: Text("Cardio speacalist"),)
+                label: Text("Cardio"),)
 
           ],
         ),
