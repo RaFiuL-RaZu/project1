@@ -140,7 +140,7 @@ class _MeditaionAppState extends State<MeditaionApp> {
                 Column(
                   children: [
                     Container(
-                      child: Icon(Icons.heart_broken,color: Colors.red,size: 40,),
+                      child: Icon(Icons.heart_broken_rounded,color: Colors.red,size: 40,),
                       height: 50,
                       width: 50,
                       decoration: BoxDecoration(
@@ -156,7 +156,7 @@ class _MeditaionAppState extends State<MeditaionApp> {
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Text("All"),
+                      child: Text("Cardiology"),
                     ),
                   ],
                 ),
@@ -164,7 +164,7 @@ class _MeditaionAppState extends State<MeditaionApp> {
                 Column(
                   children: [
                     Container(
-                      child: Icon(Icons.heart_broken,color: Colors.red,size: 40,),
+                      child: Image.asset("assets/drugs.png"),
                       height: 50,
                       width: 50,
                       decoration: BoxDecoration(
@@ -180,7 +180,7 @@ class _MeditaionAppState extends State<MeditaionApp> {
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Text("All"),
+                      child: Text("medicine"),
                     ),
                   ],
                 ),
@@ -188,7 +188,7 @@ class _MeditaionAppState extends State<MeditaionApp> {
                 Column(
                   children: [
                     Container(
-                      child: Icon(Icons.heart_broken,color: Colors.red,size: 40,),
+                      child: Image.asset("assets/drugs(1).png"),
                       height: 50,
                       width: 50,
                       decoration: BoxDecoration(
@@ -204,7 +204,7 @@ class _MeditaionAppState extends State<MeditaionApp> {
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Text("All"),
+                      child: Text("general"),
                     ),
                   ],
                 ),
@@ -212,7 +212,7 @@ class _MeditaionAppState extends State<MeditaionApp> {
                 Column(
                   children: [
                     Container(
-                      child: Icon(Icons.heart_broken,color: Colors.red,size: 40,),
+                      child:Image.asset("assets/family.png"),
                       height: 50,
                       width: 50,
                       decoration: BoxDecoration(
@@ -228,7 +228,7 @@ class _MeditaionAppState extends State<MeditaionApp> {
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Text("All"),
+                      child: Text("family"),
                     ),
                   ],
                 ),
