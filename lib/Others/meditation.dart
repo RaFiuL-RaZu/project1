@@ -116,7 +116,7 @@ class _MeditaionAppState extends State<MeditaionApp> {
                 Column(
                   children: [
                     Container(
-                      child: Icon(Icons.heart_broken,color: Colors.red,size: 40,),
+                      child: Image.asset("assets/doctor.png"),
                       height: 50,
                       width: 50,
                       decoration: BoxDecoration(
