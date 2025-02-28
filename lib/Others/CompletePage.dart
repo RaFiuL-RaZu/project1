@@ -13,6 +13,7 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   var myKey =GlobalKey<FormState>();
+  var isdiseble=true;
 
   @override
   Widget build(BuildContext context) {
@@ -59,10 +60,16 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(height: 30,),
               Text("Password",style: TextStyle(color: Colors.black54,fontSize: 22),),
               TextFormField(
-                obscureText: true,
+                obscureText: isdiseble,
                 decoration: InputDecoration(
                   suffixIcon:InkWell(
-                    onTap: (){},
+                    onTap: (){
+                      isdiseble=!isdiseble;
+                      log("${isdiseble}");
+                      setState(() {
+
+                      });
+                    },
                     child: Icon(Icons.visibility),
                   ),
                   border: OutlineInputBorder(
