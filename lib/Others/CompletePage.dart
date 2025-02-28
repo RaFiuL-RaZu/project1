@@ -59,7 +59,12 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(height: 30,),
               Text("Password",style: TextStyle(color: Colors.black54,fontSize: 22),),
               TextFormField(
+                obscureText: true,
                 decoration: InputDecoration(
+                  suffixIcon:InkWell(
+                    onTap: (){},
+                    child: Icon(Icons.visibility),
+                  ),
                   border: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.black54),
                     borderRadius: BorderRadius.circular(10),
