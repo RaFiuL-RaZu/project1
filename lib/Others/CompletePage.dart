@@ -46,7 +46,13 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 validator: (value){
-                  return "Field can empty.";
+                  if(value==null || value==" "){
+                    return "Field can empty.";
+                  }
+                  else if(value!="rafi@gmail.com"){
+                    return "wrong maill";
+                  }
+                  return null;
                 },
           
               ),
