@@ -71,16 +71,20 @@ class _LoginPageState extends State<LoginPage> {
                 Text("Remember me?"),
               ],
             ),
-            Center(
-              child: Card(
-                color: Colors.pink,
-                child:SizedBox(
+            InkWell(
+              onTap: (){},
+              child: Center(
+                child: Container(
                   height: 50,
                   width: 200,
-                  child: Center(child: Text("Login",style: TextStyle(color: Colors.white,fontSize: 22,fontWeight: FontWeight.w600),)),
-                )
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.pink,
+                  ),
+                  child: Center(child: Text("Login",style: TextStyle(fontSize: 22,color: Colors.white,fontWeight: FontWeight.w600),)),
+                ),
               ),
-            )
+            ),
           ],
         ),
       ),
