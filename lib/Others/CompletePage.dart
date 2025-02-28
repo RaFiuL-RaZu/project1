@@ -70,7 +70,7 @@ class _LoginPageState extends State<LoginPage> {
 
                       });
                     },
-                    child: Icon(Icons.visibility),
+                    child:isdiseble==true ? Icon(Icons.visibility) :Icon(Icons.visibility_off),
                   ),
                   border: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.black54),
