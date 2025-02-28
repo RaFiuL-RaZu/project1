@@ -30,30 +30,37 @@ class _RadioListDropState extends State<RadioListDrop> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(padding: EdgeInsets.all(20),
-      child: Text("1.  Which is the capital in Bangladesh ?")),
+      child: Text("1. Which is the capital in Bangladesh ?")),
           RadioListTile<int>(
             title: Text("Dhaka"),
+              tileColor: Colors.amber,
               value: 1,
               groupValue: selected,
               onChanged: (value) {
                 valueInitialFun(value: value!);
               }),
+          SizedBox(height: 5,),
           RadioListTile<int>(
               title: Text("Chittagong"),
+              tileColor: Colors.amber,
               value: 2,
               groupValue: selected,
               onChanged: (value) {
                 valueInitialFun(value: value!);
               }),
+          SizedBox(height: 5,),
           RadioListTile<int>(
               title: Text("Shyllet"),
+              tileColor: Colors.amber,
               value: 3,
               groupValue: selected,
               onChanged: (value) {
                 valueInitialFun(value: value!);
               }),
+          SizedBox(height: 5,),
           RadioListTile<int>(
               title: Text("Rangpur"),
+              tileColor: Colors.amber,
               value: 4,
               groupValue: selected,
               onChanged: (value) {
