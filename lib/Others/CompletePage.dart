@@ -14,6 +14,8 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   var myKey =GlobalKey<FormState>();
   var isdiseble=true;
+  TextEditingController mailController=TextEditingController();
+  TextEditingController passwordController=TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -31,20 +33,12 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(height: 50,),
               Text("Email",style: TextStyle(color: Colors.black54,fontSize: 22),),
               TextFormField(
+                controller: mailController,
                 decoration: InputDecoration(
                   contentPadding: EdgeInsets.symmetric(horizontal: 10),
-                  border: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black54),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black54),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black54),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
+                  border: _buildOutlineInputBorder(),
+                  focusedBorder: _buildOutlineInputBorder(),
+                  enabledBorder: _buildOutlineInputBorder(),
                 ),
                 validator: (value){
                   if(value==null || value==" "){
@@ -60,6 +54,7 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(height: 30,),
               Text("Password",style: TextStyle(color: Colors.black54,fontSize: 22),),
               TextFormField(
+                controller: passwordController,
                 obscureText: isdiseble,
                 decoration: InputDecoration(
                   suffixIcon:InkWell(
@@ -72,21 +67,27 @@ class _LoginPageState extends State<LoginPage> {
                     },
                     child:isdiseble==true ? Icon(Icons.visibility) :Icon(Icons.visibility_off),
                   ),
-                  border: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black54),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black54),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black54),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
+                  border: _buildOutlineInputBorder(),
+                  focusedBorder: _buildOutlineInputBorder(),
+                  enabledBorder: _buildOutlineInputBorder(),
                 ),
                 validator: (value){
-                  return "Field can empty";
+                  if(value==null || value==""){
+                    return "Password is empty";
+                  }
+                  else if(value.length <8){
+                    return "Password must be 8 digit";
+                  }
+                  else if(!(RegExp(r'[A-Z]').hasMatch(value)) &&
+                      RegExp(r'[a-z]').hasMatch(value) &&
+                      RegExp(r'[0-9]').hasMatch(value)){
+                    return "Password not strong";
+                  }
+                  return null;
+                  setState(() {
+
+                  });
+
                 },
           
               ),
@@ -123,5 +124,12 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
     );
+  }
+
+  OutlineInputBorder _buildOutlineInputBorder() {
+    return OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.black54),
+                  borderRadius: BorderRadius.circular(10),
+                );
   }
 }
