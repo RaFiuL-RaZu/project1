@@ -109,9 +109,11 @@ class _LoginPageState extends State<LoginPage> {
 
                   if(studentList.contains(mailController.text)){
                     log("======success");
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Login successfuly")));
                   }
                   else{
                     log("=======Not fund===");
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("User error")));
                   }
 
 
