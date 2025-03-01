@@ -17,6 +17,8 @@ class _LoginPageState extends State<LoginPage> {
   TextEditingController mailController=TextEditingController();
   TextEditingController passwordController=TextEditingController();
 
+  List<String> studentList =["Razu","Sazu","Safin"];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
                   if(value==null || value==" "){
                     return "Field can empty.";
                   }
-                  else if(value!="rafi@gmail.com"){
+                  else if(!value.contains("@") || !value.contains(".")){
                     return "wrong maill";
                   }
                   return null;
@@ -99,20 +101,29 @@ class _LoginPageState extends State<LoginPage> {
               ),
               InkWell(
                 onTap: (){
-                  log("======111111====");
-                  if(!myKey.currentState!.validate()) {
-                    log("======22222====");
-                    return;
+                  // log("======111111====");
+                  // if(!myKey.currentState!.validate()) {
+                  //   log("======22222====");
+                  //   return;
+                  // }
+
+                  if(studentList.contains(mailController.text)){
+                    log("======success");
                   }
-                  if(mailController.text == "rafi@gmail.com" && passwordController.text == "Rafi102621"){
-                    log("=====Login succesfully===");
-                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Login succesfully")));
+                  else{
+                    log("=======Not fund===");
                   }
-                  else if(mailController.text != "rafi@gmail.com" && passwordController.text != "Rafi102621"){
-                    log("=====Wrong pass===");
-                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Wrong Password")));
-                  }
-                  return;
+
+
+                  // if(mailController.text == "rafi@gmail.com" && passwordController.text == "Rafi102621"){
+                  //   log("=====Login succesfully===");
+                  //   ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Login succesfully")));
+                  // }
+                  // else{
+                  //   log("=====Wrong pass===");
+                  //   ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Wrong Password")));
+                  // }
+                  // return;
                 },
                 child: Center(
                   child: Container(
