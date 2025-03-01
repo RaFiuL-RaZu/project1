@@ -6,6 +6,7 @@ import 'package:project1/Others/CGPACalculator.dart';
 import 'package:project1/Others/CompletePage.dart';
 import 'package:project1/Others/Loginpage.dart';
 import 'package:project1/Others/Navigator.dart';
+import 'package:project1/Others/NoteApp.dart';
 import 'package:project1/Others/homepage.dart';
 import 'package:project1/Others/meditation.dart';
 import 'package:project1/Others/nextpage.dart';
@@ -23,7 +24,8 @@ class MyApp extends StatelessWidget{
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      theme: ThemeData.dark(),
+      home: Noteapp(),
     );
   }
 

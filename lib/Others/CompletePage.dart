@@ -3,6 +3,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:project1/Others/SingupPage.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key? key}) : super(key: key);
@@ -130,6 +131,7 @@ class _LoginPageState extends State<LoginPage> {
                   //   ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Wrong Password")));
                   // }
                   // return;
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext)=>HomeActivity()));
                 },
                 child: Center(
                   child: Container(
