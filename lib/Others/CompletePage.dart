@@ -99,13 +99,19 @@ class _LoginPageState extends State<LoginPage> {
               ),
               InkWell(
                 onTap: (){
-                  if(myKey.currentState!.validate()){
+                  log("======111111====");
+                  if(!myKey.currentState!.validate()) {
+                    log("======22222====");
                     return;
                   }
-                  log("===========");
-                  setState(() {
-
-                  });
+                  if(mailController.text == "rafi@gmail.com" && passwordController.text == "Rafi102621"){
+                    log("=====Login succesfully===");
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Login succesfully")));
+                  }
+                  else if(mailController.text != "rafi@gmail.com" && passwordController.text != "Rafi102621"){
+                    log("=====Wrong pass===");
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Wrong Password")));
+                  }
                 },
                 child: Center(
                   child: Container(
