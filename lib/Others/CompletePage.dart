@@ -112,6 +112,7 @@ class _LoginPageState extends State<LoginPage> {
                     log("=====Wrong pass===");
                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Wrong Password")));
                   }
+                  return;
                 },
                 child: Center(
                   child: Container(
