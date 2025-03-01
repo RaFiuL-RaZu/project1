@@ -17,7 +17,11 @@ class _LoginPageState extends State<LoginPage> {
   TextEditingController mailController=TextEditingController();
   TextEditingController passwordController=TextEditingController();
 
-  List<String> studentList =["Razu","Sazu","Safin"];
+  var studentList={"Razu":"rafi102621",
+    "Sazu":"safi102621",
+    "Lazu":"Lafi102621",
+    "Dazu":"dafi102621",
+  };
 
   @override
   Widget build(BuildContext context) {
@@ -107,7 +111,7 @@ class _LoginPageState extends State<LoginPage> {
                   //   return;
                   // }
 
-                  if(studentList.contains(mailController.text)){
+                  if(studentList.containsKey(mailController.text) && studentList.containsValue(passwordController.text)){
                     log("======success");
                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Login successfuly")));
                   }
