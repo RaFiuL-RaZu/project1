@@ -63,7 +63,8 @@ class Noteapp extends StatefulWidget {
          ),
        ),
        floatingActionButton: FloatingActionButton(onPressed: (){
-       },child: Icon(Icons.add),),
+       },child: Icon(Icons.add,color: Colors.grey,),),
+       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
      );
    }
  }
