@@ -39,13 +39,17 @@ class Noteapp extends StatefulWidget {
                    ),
                  ),
              ),
-             SizedBox(height: 20,),
+             SizedBox(height: 10,),
              Padding(
                padding: const EdgeInsets.all(8.0),
                child: GridView.builder(
                  shrinkWrap: true,
                  itemCount: 3,
-                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                       crossAxisCount: 2,
+                     crossAxisSpacing: 10,
+                     childAspectRatio: 0.95,
+                   ),
                    itemBuilder: (context,index){
                  return NoteCardWidget();
                    }),
