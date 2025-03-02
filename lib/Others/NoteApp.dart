@@ -57,12 +57,13 @@ class Noteapp extends StatefulWidget {
                    return NoteCardWidget(i: index+1,);
                      }),
                ),
-             )
+             ),
 
-        
            ],
          ),
        ),
+       floatingActionButton: FloatingActionButton(onPressed: (){
+       },child: Icon(Icons.add),),
      );
    }
  }
