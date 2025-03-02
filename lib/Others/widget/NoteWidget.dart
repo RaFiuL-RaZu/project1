@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 
 class NoteCardWidget extends StatelessWidget {
   const NoteCardWidget({
-    Key? key,
+    Key? key, required this.i,
   }) : super(key: key);
+ final int i;
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +24,11 @@ class NoteCardWidget extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Text("Song for the old onece",style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.w600),),
             ),
+            CircleAvatar(
+              backgroundColor: Colors.grey,
+              radius: 15,
+              child: Text("${i}"),
+            )
           ],
         ),
       ),
