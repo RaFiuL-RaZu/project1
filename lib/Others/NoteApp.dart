@@ -1,7 +1,12 @@
 
 
- import 'package:flutter/material.dart';
+ import 'dart:developer';
+
+import 'package:flutter/material.dart';
+import 'package:project1/Others/widget/NoteAddScr.dart';
 import 'package:project1/Others/widget/NoteWidget.dart';
+
+ List<Map<String,dynamic>> noteList=[];
 
 class Noteapp extends StatefulWidget {
    const Noteapp({Key? key}) : super(key: key);
@@ -46,7 +51,7 @@ class Noteapp extends StatefulWidget {
                  child: GridView.builder(
                    physics: ScrollPhysics(),
                    shrinkWrap: true,
-                   itemCount: 5,
+                   itemCount: noteList.length,
                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                          crossAxisCount: 2,
                        crossAxisSpacing: 10,
@@ -62,8 +67,12 @@ class Noteapp extends StatefulWidget {
            ],
          ),
        ),
-       floatingActionButton: FloatingActionButton(onPressed: (){
-       },child: Icon(Icons.add,color: Colors.grey,),),
+       floatingActionButton: FloatingActionButton(
+         backgroundColor: Colors.grey,
+           onPressed: (){
+           log("==========rrrrr=====");
+           Navigator.push(context, MaterialPageRoute(builder: (context)=> NoteAddScren()));
+       },child: Icon(Icons.add,color: Colors.black,),),
        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
      );
    }
