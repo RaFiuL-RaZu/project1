@@ -16,18 +16,24 @@ class NoteCardWidget extends StatelessWidget {
         height: 200,
         width: MediaQuery.sizeOf(context).width/3,
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("${DateTime.now().toString().substring(0,16)}",style:TextStyle(color: Colors.grey),),
+            Center(child: Text("${DateTime.now().toString().substring(0,16)}",style:TextStyle(color: Colors.grey),)),
             SizedBox(height: 10,),
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text("Song for the old onece",style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.w600),),
+              ),
+            ),
+            Spacer(),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text("Song for the old onece",style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.w600),),
-            ),
-            CircleAvatar(
-              backgroundColor: Colors.grey,
-              radius: 15,
-              child: Text("${i}"),
+              child: CircleAvatar(
+                backgroundColor: Colors.grey,
+                radius: 15,
+                child: Text("${i}"),
+              ),
             )
           ],
         ),
