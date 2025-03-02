@@ -1,6 +1,7 @@
 
 
  import 'package:flutter/material.dart';
+import 'package:project1/Others/widget/NoteWidget.dart';
 
 class Noteapp extends StatefulWidget {
    const Noteapp({Key? key}) : super(key: key);
@@ -39,21 +40,17 @@ class Noteapp extends StatefulWidget {
                  ),
              ),
              SizedBox(height: 20,),
-             Card(
-               color: Colors.white,
-               child: SizedBox(
-                 height: 200,
-                 width: MediaQuery.sizeOf(context).width/3,
-                 child: Column(
-                   crossAxisAlignment: CrossAxisAlignment.center,
-                   children: [
-                     Text("${DateTime.now().toString().substring(0,16)}",style:TextStyle(color: Colors.grey),),
-                     SizedBox(height: 10,),
-                     Text("Song for the old onece",style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.w600),),
-                   ],
-                 ),
-               ),
+             Padding(
+               padding: const EdgeInsets.all(8.0),
+               child: GridView.builder(
+                 shrinkWrap: true,
+                 itemCount: 3,
+                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+                   itemBuilder: (context,index){
+                 return NoteCardWidget();
+                   }),
              )
+
         
            ],
          ),
@@ -61,3 +58,5 @@ class Noteapp extends StatefulWidget {
      );
    }
  }
+
+
