@@ -48,25 +48,49 @@ class _PNoteAppState extends State<PNoteApp> {
                 ),
               ),
             ),
-            Card(
-              color: Colors.teal.shade700,
-              child: SizedBox(
-                height: 100,
-                width: double.infinity,
-                child:Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("Bucket List",style:TextStyle(fontSize: 22,fontWeight: FontWeight.w800,color: Colors.black),),
-                      Text("1. Travel to japan",style:TextStyle(fontSize: 16,fontWeight: FontWeight.w200,color: Colors.grey.shade400),),
-                      Text("2. Learn to play guitter",style:TextStyle(fontSize: 16,fontWeight: FontWeight.w200,color: Colors.grey.shade400),),
-                    ],
-                  ),
-                ),
-              ),
-            )
+            ListView.builder(
+              shrinkWrap: true,
+              itemCount: 5,
+                itemBuilder: (context,position){
+                  return cardview();
+                })
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class cardview extends StatelessWidget {
+  const cardview({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      color: Colors.teal.shade700,
+      child: SizedBox(
+        height: 100,
+        width: double.infinity,
+        child:Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("Bucket List",style:TextStyle(fontSize: 22,fontWeight: FontWeight.w800,color: Colors.black),),
+                  Text("1. Travel to japan",style:TextStyle(fontSize: 16,fontWeight: FontWeight.w200,color: Colors.grey.shade400),),
+                  Text("2. Learn to play guitter",style:TextStyle(fontSize: 16,fontWeight: FontWeight.w200,color: Colors.grey.shade400),),
+                ],
+              ),
+              Spacer(),
+              Container(
+                padding: EdgeInsets.only(right: 25),
+                  child: Icon(Icons.delete,color: Colors.grey.shade400)),
+            ],
+          ),
         ),
       ),
     );
