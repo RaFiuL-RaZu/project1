@@ -71,6 +71,9 @@ class Noteapp extends StatefulWidget {
          backgroundColor: Colors.grey,
            onPressed: (){
            log("==========rrrrr=====");
+           setState(() {
+
+           });
            Navigator.push(context, MaterialPageRoute(builder: (context)=> NoteAddScren()));
        },child: Icon(Icons.add,color: Colors.black,),),
        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,

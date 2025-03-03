@@ -45,7 +45,10 @@ class _NoteAddScrenState extends State<NoteAddScren> {
                     "note":noteController.text,
                   };
                   noteList.add(notedata);
-                  log("=====${noteList.length}===");
+                  Navigator.pop(context);
+                  setState(() {
+
+                  });
                 },
                 child: Card(
                   color:Color(0xfff272727),
