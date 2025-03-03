@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:project1/Extras/addlist.dart';
 
 class PNoteApp extends StatefulWidget {
   const PNoteApp({Key? key}) : super(key: key);
@@ -57,9 +58,16 @@ class _PNoteAppState extends State<PNoteApp> {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.blueGrey,
+        onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>Newpageadd()));
+        },
+      child: Icon(Icons.add),),
     );
   }
 }
+
 
 class cardview extends StatelessWidget {
   const cardview({
@@ -69,7 +77,7 @@ class cardview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.teal.shade700,
+      color: Colors.blueGrey,
       child: SizedBox(
         height: 100,
         width: double.infinity,
@@ -86,9 +94,15 @@ class cardview extends StatelessWidget {
                 ],
               ),
               Spacer(),
-              Container(
-                padding: EdgeInsets.only(right: 25),
-                  child: Icon(Icons.delete,color: Colors.grey.shade400)),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(height: 20,),
+                    Icon(Icons.delete,color: Colors.grey.shade400),
+                    SizedBox(height: 10,),
+                    Text("${DateTime.now().toString().substring(0,16)}"),
+                  ],
+                )
             ],
           ),
         ),
