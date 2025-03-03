@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:project1/Extras/addlist.dart';
 
+List<Map<String,dynamic>> noteList=[];
+
 class PNoteApp extends StatefulWidget {
   const PNoteApp({Key? key}) : super(key: key);
 
@@ -11,6 +13,7 @@ class PNoteApp extends StatefulWidget {
 }
 
 class _PNoteAppState extends State<PNoteApp> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,43 +28,48 @@ class _PNoteAppState extends State<PNoteApp> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextField(
-                decoration: InputDecoration(
-                  contentPadding: EdgeInsets.symmetric(horizontal: 15,vertical: 0),
-                  fillColor: Color(0xf404040),
-                  filled: true,
-                  prefixIcon: Icon(Icons.search),
-                  hintText: "Search notes....",
-                  hintStyle:TextStyle(letterSpacing:1),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                    borderSide: BorderSide(color: Colors.grey),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                    borderSide: BorderSide(color: Colors.grey),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextField(
+                  decoration: InputDecoration(
+                    contentPadding: EdgeInsets.symmetric(horizontal: 15,vertical: 0),
+                    fillColor: Color(0xf404040),
+                    filled: true,
+                    prefixIcon: Icon(Icons.search),
+                    hintText: "Search notes....",
+                    hintStyle:TextStyle(letterSpacing:1),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide: BorderSide(color: Colors.grey),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide: BorderSide(color: Colors.grey),
+                    ),
                   ),
                 ),
               ),
-            ),
-            ListView.builder(
-              shrinkWrap: true,
-              itemCount: 5,
-                itemBuilder: (context,position){
-                  return cardview();
-                })
-          ],
+              ListView.builder(
+                shrinkWrap: true,
+                itemCount: noteList.length,
+                  itemBuilder: (context,position){
+                    return cardview();
+                  })
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.blueGrey,
         onPressed: (){
           Navigator.push(context, MaterialPageRoute(builder: (context)=>Newpageadd()));
+          setState(() {
+
+          });
         },
       child: Icon(Icons.add),),
     );

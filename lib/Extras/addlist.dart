@@ -2,6 +2,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:project1/Extras/PracticeNoteApp.dart';
 
 class Newpageadd extends StatefulWidget {
   const Newpageadd({Key? key}) : super(key: key);
@@ -13,6 +14,8 @@ class Newpageadd extends StatefulWidget {
 class _NewpageaddState extends State<Newpageadd> {
 
   final myKey=GlobalKey<FormState>();
+
+  TextEditingController noteController=TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,6 +30,7 @@ class _NewpageaddState extends State<Newpageadd> {
           child: Column(
             children: [
                   TextFormField(
+                    controller: noteController,
                     maxLines: 10,
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.symmetric(horizontal: 15,vertical: 15),
@@ -56,9 +60,19 @@ class _NewpageaddState extends State<Newpageadd> {
                   ),
               SizedBox(height: 20,),
               ElevatedButton(onPressed: (){
-                if(myKey.currentState!.validate()){
-                  return;
-                }
+               // if(myKey.currentState!.validate()){
+                //  return;
+                //}
+                log("=======${noteList.length}====");
+                Map<String,dynamic> noteinfo= {
+                "Create_at" : DateTime.now(),
+                  "note":noteController.text,
+              };
+                noteList.add(noteinfo);
+                Navigator.pop(context);
+                setState(() {
+
+                });
 
               }, child:Padding(
                 padding: const EdgeInsets.all(8.0),
