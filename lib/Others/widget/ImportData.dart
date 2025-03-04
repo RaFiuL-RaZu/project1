@@ -8,6 +8,11 @@ class DocsFile extends StatefulWidget {
 }
 
 class _DocsFileState extends State<DocsFile> {
+
+  TextEditingController nameController=TextEditingController();
+  TextEditingController rollController=TextEditingController();
+  TextEditingController deptController=TextEditingController();
+
   List<Map<String, dynamic>> studentList = [
     {"name": "RaFiul Islam", "roll": "102621", "dept": "Computer Technology"},
     {"name": "Robiul Islam", "roll": "102620", "dept": "Electrical Technology"},
@@ -57,12 +62,15 @@ class _DocsFileState extends State<DocsFile> {
         ),
       ),
       floatingActionButton: FloatingActionButton(onPressed: (){
-        showDialog(context: context, builder: (context)=>AlertDialog(
+        showDialog(context: context,
+            barrierDismissible: false,
+            builder: (context)=>AlertDialog(
           title:Text("New person add"),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               TextField(
+                controller: nameController,
                 decoration: InputDecoration(
                   hintText: "Person name",
                   hintStyle: TextStyle(color: Colors.pink),
@@ -74,6 +82,7 @@ class _DocsFileState extends State<DocsFile> {
               ),
               SizedBox(height: 5,),
               TextField(
+                controller: rollController,
                 decoration: InputDecoration(
                     hintText: "Roll number",
                     hintStyle: TextStyle(color: Colors.pink),
@@ -85,6 +94,7 @@ class _DocsFileState extends State<DocsFile> {
               ),
               SizedBox(height: 5,),
               TextField(
+                controller: deptController,
                 decoration: InputDecoration(
                     hintText: "Department",
                     hintStyle: TextStyle(color: Colors.pink),
@@ -94,9 +104,23 @@ class _DocsFileState extends State<DocsFile> {
                     )
                 ),
               ),
+              SizedBox(height: 10,),
 
             ],
           ),
+          actions: [
+            ElevatedButton(onPressed: (){
+             Map<String,dynamic> add= {"name": "Mamun islam",
+               "roll": "102615",
+               "dept": "Computer Technology"};
+             studentList.add(add);
+             Navigator.pop(context);
+             setState(() {
+
+             });
+
+            }, child: Text("Add",style:TextStyle(color: Colors.pink),))
+          ],
         ));
       },child: Icon(Icons.add),),
     );
