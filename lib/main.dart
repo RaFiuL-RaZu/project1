@@ -12,6 +12,7 @@ import 'package:project1/Others/homepage.dart';
 import 'package:project1/Others/meditation.dart';
 import 'package:project1/Others/nextpage.dart';
 import 'package:project1/Others/radioList.dart';
+import 'package:project1/Others/widget/Docs.dart';
 
 main(){
   runApp(const MyApp());
@@ -25,8 +26,7 @@ class MyApp extends StatelessWidget{
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      darkTheme: ThemeData.dark(),
-      home: PNoteApp(),
+      home: DocsFile(),
     );
   }
 
