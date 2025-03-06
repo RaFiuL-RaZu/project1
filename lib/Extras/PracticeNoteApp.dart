@@ -1,5 +1,7 @@
 
 
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:project1/Extras/addlist.dart';
 
@@ -65,11 +67,11 @@ class _PNoteAppState extends State<PNoteApp> {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.blueGrey,
-        onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context)=>Newpageadd()));
-          setState(() {
+        onPressed: ()async{
+         await Navigator.push(context, MaterialPageRoute(builder: (context)=>Newpageadd(data: noteList[0],)));
+         setState(() {
 
-          });
+         });
         },
       child: Icon(Icons.add),),
     );
@@ -98,7 +100,6 @@ class cardview extends StatelessWidget {
                 children: [
                   Text("Bucket List",style:TextStyle(fontSize: 22,fontWeight: FontWeight.w800,color: Colors.black),),
                   Text("1. Travel to japan",style:TextStyle(fontSize: 16,fontWeight: FontWeight.w200,color: Colors.grey.shade400),),
-                  Text("2. Learn to play guitter",style:TextStyle(fontSize: 16,fontWeight: FontWeight.w200,color: Colors.grey.shade400),),
                 ],
               ),
               Spacer(),

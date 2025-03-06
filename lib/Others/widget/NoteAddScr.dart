@@ -39,14 +39,13 @@ class _NoteAddScrenState extends State<NoteAddScren> {
                    // return;
 
                  // }
-                  log("=====${noteList.length}====");
-                  Map<String,dynamic> notedata={
-                    "Create_at":DateTime.now(),
-                    "note":noteController.text,
-                  };
-                  noteList.add(notedata);
-                  Navigator.pop(context);
                   setState(() {
+                    Map<String,dynamic> notedata={
+                      "Create_at":DateTime.now(),
+                      "note":noteController.text,
+                    };
+                    noteList.add(notedata);
+                    Navigator.pop(context);
 
                   });
                 },

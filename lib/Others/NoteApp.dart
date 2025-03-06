@@ -6,7 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:project1/Others/widget/NoteAddScr.dart';
 import 'package:project1/Others/widget/NoteWidget.dart';
 
- List<Map<String,dynamic>> noteList=[];
+ List<Map<String,dynamic>> noteList=[
+ {"Create_at":DateTime.now(),
+   "note":"",}
+ ];
 
 class Noteapp extends StatefulWidget {
    const Noteapp({Key? key}) : super(key: key);
@@ -33,7 +36,7 @@ class Noteapp extends StatefulWidget {
                child: TextField(
                  textAlign: TextAlign.center,
                    decoration: InputDecoration(
-                     hintText: "Search",
+                     hintText: "Search notes..",
                      contentPadding: EdgeInsets.symmetric(horizontal: 15,vertical: 0),
                      fillColor: Color(0xfff272727),
                      filled: true,
@@ -59,7 +62,7 @@ class Noteapp extends StatefulWidget {
                        mainAxisSpacing: 10,
                      ),
                      itemBuilder: (context,index){
-                   return NoteCardWidget(i: index+1,);
+                   return NoteCardWidget(i: index+1, data: noteList[index],);
                      }),
                ),
              ),
@@ -69,12 +72,11 @@ class Noteapp extends StatefulWidget {
        ),
        floatingActionButton: FloatingActionButton(
          backgroundColor: Colors.grey,
-           onPressed: (){
-           log("==========rrrrr=====");
+           onPressed: ()async{
+            await Navigator.push(context, MaterialPageRoute(builder: (context)=> NoteAddScren()));
            setState(() {
 
            });
-           Navigator.push(context, MaterialPageRoute(builder: (context)=> NoteAddScren()));
        },child: Icon(Icons.add,color: Colors.black,),),
        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
      );

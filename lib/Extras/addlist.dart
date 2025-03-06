@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:project1/Extras/PracticeNoteApp.dart';
 
 class Newpageadd extends StatefulWidget {
-  const Newpageadd({Key? key}) : super(key: key);
+  const Newpageadd({Key? key, required this.data}) : super(key: key);
+
+  final Map<String,dynamic> data;
 
   @override
   State<Newpageadd> createState() => _NewpageaddState();
@@ -63,13 +65,16 @@ class _NewpageaddState extends State<Newpageadd> {
                // if(myKey.currentState!.validate()){
                 //  return;
                 //}
-                log("=======${noteList.length}====");
-                Map<String,dynamic> noteinfo= {
-                "Create_at" : DateTime.now(),
-                  "note":noteController.text,
-              };
-                noteList.add(noteinfo);
-                Navigator.pop(context);
+                setState(() {
+                  log("=======${noteList.length}====");
+                  Map<String,dynamic> noteinfo= {
+                    "Create_at" : DateTime.now(),
+                    "note":noteController.text,
+                  };
+                  noteList.add(noteinfo);
+                //  Navigator.push(context, MaterialPageRoute(builder: (context)=>PNoteApp()));
+                  Navigator.pop(context);
+                });
                 setState(() {
 
                 });

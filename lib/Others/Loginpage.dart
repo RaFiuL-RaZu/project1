@@ -7,7 +7,8 @@ import 'package:project1/Others/SingupPage.dart';
 class HomeScren extends StatelessWidget {
   HomeScren({Key? key}) : super(key: key);
 
-  TextEditingController nameController = TextEditingController();
+  TextEditingController gmailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -107,19 +108,21 @@ class HomeScren extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               TextField(
+                                controller: gmailController,
                                 decoration: InputDecoration(
-                                  labelText: "Email",
-                                  border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(5),
-                                    borderSide: BorderSide(color: Colors.amber),
+                                    labelText: "Email",
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(5),
+                                      borderSide: BorderSide(color: Colors.amber),
 
-                                  )
+                                    )
                                 ),
                               ),
                               SizedBox(
                                 height: 30,
                               ),
                               TextField(
+                                controller: passwordController,
                                 decoration: InputDecoration(
                                     labelText: "Password",
                                     border: OutlineInputBorder(
@@ -143,7 +146,8 @@ class HomeScren extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   ElevatedButton(onPressed: (){
-                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeActivity()));
+
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeActivity(email:0125668, password: 258511222,)));
                                   }, child: Text("Sign in",
                                   ),
                                     style: ButtonStyle(

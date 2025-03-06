@@ -4,7 +4,10 @@
 import 'package:flutter/material.dart';
 
 class HomeActivity extends StatelessWidget{
-  const HomeActivity({Key? key}) : super(key: key);
+  const HomeActivity({Key? key, required this.email, required this.password,}) : super(key: key);
+
+  final int email;
+  final int password;
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +58,7 @@ class HomeActivity extends StatelessWidget{
                     SizedBox(height: 40,),
                     TextField(
                       decoration: InputDecoration(
-                          labelText: "Email",
+                          labelText: "${email}",
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5),
                             borderSide: BorderSide(color: Colors.amber),
@@ -66,7 +69,7 @@ class HomeActivity extends StatelessWidget{
                     SizedBox(height: 40,),
                     TextField(
                       decoration: InputDecoration(
-                          labelText: "Password",
+                          labelText: "${password}",
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5),
                             borderSide: BorderSide(color: Colors.amber),
@@ -77,7 +80,7 @@ class HomeActivity extends StatelessWidget{
                     SizedBox(height: 40,),
                     TextField(
                       decoration: InputDecoration(
-                          labelText: "Confirm Password",
+                          labelText: "${password}",
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5),
                             borderSide: BorderSide(color: Colors.amber),

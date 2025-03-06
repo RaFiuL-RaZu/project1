@@ -25,6 +25,7 @@ class _DataPassingState extends State<DataPassing> {
                 FilteringTextInputFormatter.digitsOnly,
               ],
               controller: dataController,
+              maxLength: 8,
               decoration: InputDecoration(
                 hintText: "Give me some",
                 border: OutlineInputBorder(
@@ -37,6 +38,9 @@ class _DataPassingState extends State<DataPassing> {
             OutlinedButton(onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=>DataCaching(
                 id:dataController.text,
+                name: 'Razu',
+                roll: '102621',
+                dept: 'Cse',
               )));
             }, child:Text("Pass Data")),
           ],

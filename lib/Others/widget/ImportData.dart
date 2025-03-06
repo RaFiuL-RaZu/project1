@@ -55,7 +55,14 @@ class _DocsFileState extends State<DocsFile> {
                     ),
                     title: Text("${studentList[index]["name"]}"),
                     subtitle: Text("${studentList[index]["dept"]}"),
-                    trailing: Icon(Icons.delete),
+                    trailing: InkWell(
+                      onTap: (){
+                        studentList.removeAt(index);
+                        setState(() {
+
+                        });
+                      },
+                        child: Icon(Icons.delete)),
                   );
                 })
           ],
@@ -110,11 +117,17 @@ class _DocsFileState extends State<DocsFile> {
           ),
           actions: [
             ElevatedButton(onPressed: (){
-             Map<String,dynamic> add= {"name": "Mamun islam",
-               "roll": "102615",
-               "dept": "Computer Technology"};
+              Navigator.pop(context);
+            }, child:Text("Cancel")),
+            ElevatedButton(onPressed: (){
+             Map<String,dynamic> add= {"name":nameController.text,
+               "roll": rollController.text,
+               "dept": deptController.text};
              studentList.add(add);
              Navigator.pop(context);
+             nameController.clear();
+             rollController.clear();
+             deptController.clear();
              setState(() {
 
              });
